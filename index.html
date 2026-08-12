@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>SDN Admin Portal | Smart Driver Network</title>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>
+Smart Driver Network (SDN) | Connecting Professional Drivers with Trusted Employers
+</title>
+
+<meta
+name="description"
+content="Smart Driver Network connects professional drivers with trusted employers, institutions and organizations across Tanzania and Africa."
+>
 
 <style>
+
+/* =========================================================
+   RESET
+========================================================= */
 
 *{
     margin:0;
@@ -14,1710 +28,2815 @@
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     font-family:Arial,Helvetica,sans-serif;
-    background:#f4f7fa;
     color:#172033;
-}
-
-/* =========================
-   LOGIN
-========================= */
-
-.login-page{
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:
-        linear-gradient(
-            135deg,
-            #061a31,
-            #0b5cab
-        );
-    padding:20px;
-}
-
-.login-box{
-    width:100%;
-    max-width:420px;
     background:#fff;
-    border-radius:14px;
-    padding:35px;
-    box-shadow:0 20px 60px rgba(0,0,0,.25);
+    line-height:1.6;
 }
 
-.login-logo{
-    width:65px;
-    height:65px;
-    margin:0 auto 15px;
-    border-radius:14px;
-    background:#0b5cab;
-    color:#fff;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:20px;
-    font-weight:900;
+a{
+    text-decoration:none;
 }
 
-.login-box h1{
-    text-align:center;
-    font-size:24px;
-    margin-bottom:5px;
+button,
+input,
+select,
+textarea{
+    font-family:inherit;
 }
 
-.login-box .subtitle{
-    text-align:center;
-    color:#64748b;
-    font-size:13px;
-    margin-bottom:25px;
-}
 
-.login-group{
-    margin-bottom:16px;
-}
+/* =========================================================
+   HEADER
+========================================================= */
 
-.login-group label{
-    display:block;
-    font-size:13px;
-    font-weight:700;
-    margin-bottom:6px;
-}
-
-.login-group input{
-    width:100%;
-    padding:13px;
-    border:1px solid #d6dee7;
-    border-radius:7px;
-    outline:none;
-}
-
-.login-group input:focus{
-    border-color:#0b75d1;
-}
-
-.login-button{
-    width:100%;
-    padding:13px;
-    border:0;
-    border-radius:7px;
-    background:#0b5cab;
-    color:#fff;
-    font-weight:700;
-    cursor:pointer;
-}
-
-.login-button:hover{
-    background:#075095;
-}
-
-.login-message{
-    display:none;
-    margin-top:12px;
-    padding:10px;
-    border-radius:6px;
-    background:#fff0f0;
-    color:#b42318;
-    font-size:13px;
-}
-
-/* =========================
-   ADMIN APP
-========================= */
-
-.admin-app{
-    display:none;
-    min-height:100vh;
-}
-
-/* SIDEBAR */
-
-.sidebar{
-    position:fixed;
-    left:0;
+header{
+    position:sticky;
     top:0;
-    bottom:0;
-    width:245px;
-    background:#0d1726;
-    color:#fff;
-    padding:22px 15px;
-    overflow-y:auto;
-}
-
-.admin-brand{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    padding:0 8px 25px;
-    border-bottom:1px solid rgba(255,255,255,.1);
-    margin-bottom:18px;
-}
-
-.admin-logo{
-    width:45px;
-    height:45px;
-    background:#0b75d1;
-    border-radius:9px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-weight:900;
-}
-
-.admin-brand strong{
-    font-size:16px;
-}
-
-.admin-brand span{
-    display:block;
-    color:#8fa0b3;
-    font-size:10px;
-    margin-top:2px;
-}
-
-.menu-title{
-    color:#718196;
-    font-size:10px;
-    font-weight:700;
-    padding:10px 10px;
-    text-transform:uppercase;
-}
-
-.sidebar button{
-    width:100%;
-    background:none;
-    border:0;
-    color:#bdc8d5;
-    text-align:left;
-    padding:12px 12px;
-    border-radius:7px;
-    cursor:pointer;
-    margin-bottom:3px;
-    font-size:13px;
-}
-
-.sidebar button:hover,
-.sidebar button.active{
-    background:#0b5cab;
-    color:#fff;
-}
-
-.logout{
-    margin-top:20px;
-    border-top:1px solid rgba(255,255,255,.1)!important;
-    padding-top:18px!important;
-    color:#ff9b9b!important;
-}
-
-/* MAIN */
-
-.main{
-    margin-left:245px;
-    min-height:100vh;
-}
-
-/* TOPBAR */
-
-.topbar{
-    height:70px;
+    z-index:1000;
     background:#fff;
-    border-bottom:1px solid #e2e8ef;
+    box-shadow:0 2px 14px rgba(0,0,0,.08);
+}
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    padding:11px 22px;
+
     display:flex;
     align-items:center;
     justify-content:space-between;
-    padding:0 30px;
 }
 
-.topbar h2{
-    font-size:20px;
-}
-
-.admin-user{
+.logo{
     display:flex;
     align-items:center;
     gap:10px;
-    font-size:13px;
 }
 
-.admin-avatar{
-    width:38px;
-    height:38px;
-    border-radius:50%;
+.logo-mark{
+    width:47px;
+    height:47px;
+
+    border-radius:10px;
+
     background:#0b5cab;
     color:#fff;
+
     display:flex;
     align-items:center;
     justify-content:center;
+
+    font-size:17px;
+    font-weight:900;
+}
+
+.logo-text h1{
+    color:#0b5cab;
+    font-size:18px;
+    line-height:1.1;
+}
+
+.logo-text span{
+    color:#64748b;
+    font-size:9px;
+    font-weight:700;
+    letter-spacing:.4px;
+}
+
+nav ul{
+    list-style:none;
+
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+nav a{
+    color:#172033;
+    font-size:13px;
+    font-weight:600;
+}
+
+nav a:hover{
+    color:#0b5cab;
+}
+
+.nav-register{
+    background:#0b5cab;
+    color:#fff!important;
+
+    padding:10px 17px;
+    border-radius:6px;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+    min-height:500px;
+
+    background:
+    linear-gradient(
+        110deg,
+        #061a31 0%,
+        #0b416c 100%
+    );
+
+    display:flex;
+    align-items:center;
+
+    position:relative;
+    overflow:hidden;
+}
+
+.hero:after{
+    content:"";
+
+    position:absolute;
+
+    width:430px;
+    height:430px;
+
+    border:60px solid rgba(57,167,255,.08);
+
+    border-radius:50%;
+
+    right:-180px;
+    top:-110px;
+}
+
+.hero-container{
+    max-width:1200px;
+    width:100%;
+
+    margin:auto;
+
+    padding:60px 22px;
+
+    position:relative;
+    z-index:2;
+}
+
+.hero-content{
+    max-width:720px;
+    color:#fff;
+}
+
+.hero-badge{
+    display:inline-block;
+
+    padding:7px 14px;
+
+    border:1px solid rgba(255,255,255,.35);
+    border-radius:25px;
+
+    font-size:10px;
+    font-weight:700;
+
+    margin-bottom:17px;
+}
+
+.hero h2{
+    font-size:46px;
+    line-height:1.08;
+
+    margin-bottom:17px;
+}
+
+.hero h2 span{
+    color:#39a7ff;
+}
+
+.hero p{
+    max-width:650px;
+
+    color:#dce8f3;
+
+    font-size:16px;
+
+    margin-bottom:24px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:11px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+
+    border:0;
+    cursor:pointer;
+
+    padding:13px 21px;
+
+    border-radius:7px;
+
+    font-weight:700;
+}
+
+.btn-primary{
+    background:#0b75d1;
+    color:#fff;
+}
+
+.btn-primary:hover{
+    background:#07599f;
+}
+
+.btn-outline{
+    background:transparent;
+    color:#fff;
+
+    border:1px solid rgba(255,255,255,.8);
+}
+
+.btn-outline:hover{
+    background:#fff;
+    color:#172033;
+}
+
+.btn-dark{
+    background:#172033;
+    color:#fff;
+}
+
+.btn-light{
+    background:#fff;
+    color:#0b5cab;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.search-box{
+    max-width:1050px;
+
+    margin:-32px auto 0;
+
+    position:relative;
+    z-index:10;
+
+    background:#fff;
+
+    border-radius:11px;
+
+    padding:21px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.12);
+}
+
+.search-title{
+    margin-bottom:14px;
+}
+
+.search-title h3{
+    font-size:20px;
+}
+
+.search-title p{
+    color:#64748b;
+    font-size:13px;
+}
+
+.search-grid{
+    display:grid;
+
+    grid-template-columns:
+    1fr 1fr 1fr auto;
+
+    gap:9px;
+}
+
+.search-grid input,
+.search-grid select{
+    width:100%;
+
+    padding:12px;
+
+    border:1px solid #d8e0e8;
+
+    border-radius:6px;
+
+    outline:none;
+
+    background:#fff;
+}
+
+.search-grid button{
+    border:0;
+
+    background:#0b5cab;
+    color:#fff;
+
+    padding:12px 20px;
+
+    border-radius:6px;
+
+    font-weight:700;
+
+    cursor:pointer;
+}
+
+
+/* =========================================================
+   GENERAL
+========================================================= */
+
+section{
+    padding:75px 22px;
+}
+
+.container{
+    max-width:1150px;
+    margin:auto;
+}
+
+.section-heading{
+    max-width:740px;
+
+    text-align:center;
+
+    margin:
+    0 auto 42px;
+}
+
+.section-heading h2{
+    font-size:34px;
+    line-height:1.2;
+
+    margin-bottom:10px;
+}
+
+.section-heading p{
+    color:#64748b;
+}
+
+
+/* =========================================================
+   DRIVER / EMPLOYER
+========================================================= */
+
+.two-sides{
+    background:#f7f9fc;
+}
+
+.side-grid{
+    display:grid;
+
+    grid-template-columns:
+    1fr 1fr;
+
+    gap:24px;
+}
+
+.side-card{
+    background:#fff;
+
+    padding:31px;
+
+    border-radius:10px;
+
+    border:1px solid #e1e7ed;
+}
+
+.side-card.driver{
+    border-top:5px solid #0b75d1;
+}
+
+.side-card.employer{
+    border-top:5px solid #172033;
+}
+
+.side-card h3{
+    font-size:25px;
+
+    margin-bottom:9px;
+}
+
+.side-card p{
+    color:#64748b;
+
+    margin-bottom:18px;
+}
+
+.side-card ul{
+    list-style:none;
+
+    margin-bottom:22px;
+}
+
+.side-card li{
+    margin-bottom:8px;
+}
+
+.side-card li:before{
+    content:"✓";
+
+    color:#0b75d1;
+
+    font-weight:900;
+
+    margin-right:8px;
+}
+
+
+/* =========================================================
+   HOW IT WORKS
+========================================================= */
+
+.steps{
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:14px;
+}
+
+.step{
+    text-align:center;
+
+    padding:20px;
+}
+
+.step-number{
+    width:52px;
+    height:52px;
+
+    margin:0 auto 13px;
+
+    border-radius:50%;
+
+    background:#0b5cab;
+    color:#fff;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
     font-weight:800;
 }
 
-/* CONTENT */
-
-.content{
-    padding:30px;
-}
-
-.page{
-    display:none;
-}
-
-.page.active{
-    display:block;
-}
-
-.page-title{
-    margin-bottom:25px;
-}
-
-.page-title h1{
-    font-size:27px;
+.step h3{
     margin-bottom:5px;
 }
 
-.page-title p{
+.step p{
+    color:#64748b;
+    font-size:13px;
+}
+
+
+/* =========================================================
+   CATEGORIES
+========================================================= */
+
+.categories{
+    background:#f7f9fc;
+}
+
+.category-grid{
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:17px;
+}
+
+.category{
+    background:#fff;
+
+    padding:23px;
+
+    border:1px solid #e1e7ed;
+
+    border-radius:9px;
+}
+
+.category-icon{
+    font-size:24px;
+
+    margin-bottom:8px;
+}
+
+.category h3{
+    margin-bottom:5px;
+}
+
+.category p{
     color:#64748b;
     font-size:14px;
 }
 
-/* =========================
-   STAT CARDS
-========================= */
 
-.stats{
+/* =========================================================
+   VERIFICATION
+========================================================= */
+
+.verification{
+    background:#172033;
+    color:#fff;
+}
+
+.verification-grid{
     display:grid;
-    grid-template-columns:repeat(5,1fr);
-    gap:15px;
-    margin-bottom:25px;
+
+    grid-template-columns:
+    1fr 1fr;
+
+    gap:45px;
+
+    align-items:center;
 }
 
-.stat{
-    background:#fff;
-    border:1px solid #e1e7ed;
+.verification h2{
+    font-size:35px;
+
+    line-height:1.2;
+
+    margin-bottom:14px;
+}
+
+.verification p{
+    color:#d5dfea;
+}
+
+.verification-list{
+    list-style:none;
+
+    margin-top:17px;
+}
+
+.verification-list li{
+    padding:9px 0;
+
+    border-bottom:
+    1px solid rgba(255,255,255,.1);
+}
+
+.verification-list li:before{
+    content:"✓";
+
+    color:#39a7ff;
+
+    margin-right:9px;
+}
+
+.verification-box{
+    padding:30px;
+
+    background:
+    rgba(255,255,255,.07);
+
+    border:
+    1px solid rgba(255,255,255,.13);
+
     border-radius:10px;
-    padding:20px;
 }
 
-.stat-label{
-    color:#64748b;
-    font-size:12px;
-    margin-bottom:7px;
+
+/* =========================================================
+   COUNTRIES
+========================================================= */
+
+.countries{
+    text-align:center;
 }
 
-.stat-number{
-    font-size:28px;
-    font-weight:800;
+.country-list{
+    display:flex;
+
+    justify-content:center;
+
+    gap:10px;
+
+    flex-wrap:wrap;
 }
 
-.stat.blue{
-    border-left:4px solid #0b75d1;
+.country{
+    border:1px solid #d9e1e8;
+
+    border-radius:25px;
+
+    padding:9px 18px;
+
+    font-weight:600;
 }
 
-.stat.green{
-    border-left:4px solid #168044;
+.country.active{
+    background:#0b5cab;
+
+    border-color:#0b5cab;
+
+    color:#fff;
 }
 
-.stat.orange{
-    border-left:4px solid #d18b00;
+
+/* =========================================================
+   REGISTRATION
+========================================================= */
+
+.registration{
+    background:#f4f7fa;
 }
 
-.stat.red{
-    border-left:4px solid #c53030;
-}
+.registration-wrapper{
+    max-width:900px;
 
-.stat.dark{
-    border-left:4px solid #172033;
-}
+    margin:auto;
 
-/* =========================
-   CARDS
-========================= */
-
-.card{
     background:#fff;
-    border:1px solid #e1e7ed;
-    border-radius:10px;
-    margin-bottom:20px;
+
+    border-radius:12px;
+
+    box-shadow:
+    0 8px 35px rgba(0,0,0,.08);
+
     overflow:hidden;
 }
 
-.card-header{
-    padding:18px 20px;
-    border-bottom:1px solid #e7ebef;
+.registration-header{
+    background:#0b5cab;
+
+    color:#fff;
+
+    padding:24px;
+}
+
+.registration-header h2{
+    font-size:27px;
+}
+
+.registration-header p{
+    color:#dbeaf7;
+    font-size:13px;
+}
+
+.progress{
     display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:10px;
+
+    background:#edf2f6;
 }
 
-.card-header h3{
-    font-size:16px;
+.progress-item{
+    flex:1;
+
+    text-align:center;
+
+    padding:11px 4px;
+
+    color:#7a8794;
+
+    font-size:11px;
+
+    font-weight:700;
 }
 
-.card-body{
-    padding:20px;
+.progress-item.active{
+    background:#0b75d1;
+
+    color:#fff;
 }
 
-/* =========================
-   TABLE
-========================= */
+.form-step{
+    display:none;
 
-.table-wrap{
-    overflow-x:auto;
+    padding:30px;
 }
 
-table{
-    width:100%;
-    border-collapse:collapse;
-    min-width:800px;
+.form-step.active{
+    display:block;
 }
 
-th,
-td{
-    padding:13px 12px;
-    border-bottom:1px solid #edf0f3;
-    text-align:left;
+.form-step h3{
+    font-size:22px;
+
+    margin-bottom:19px;
+}
+
+.form-grid{
+    display:grid;
+
+    grid-template-columns:
+    1fr 1fr;
+
+    gap:14px;
+}
+
+.form-group{
+    margin-bottom:13px;
+}
+
+.form-group.full{
+    grid-column:1 / -1;
+}
+
+.form-group label{
+    display:block;
+
     font-size:12px;
-}
 
-th{
-    color:#64748b;
-    background:#f8fafc;
-    font-size:11px;
-    text-transform:uppercase;
-}
-
-tr:hover td{
-    background:#fafcfe;
-}
-
-/* STATUS */
-
-.status{
-    display:inline-block;
-    padding:5px 9px;
-    border-radius:20px;
-    font-size:10px;
     font-weight:700;
+
+    margin-bottom:5px;
 }
 
-.status.paid{
-    background:#e8f7ee;
-    color:#14733d;
-}
-
-.status.pending{
-    background:#fff4d6;
-    color:#8a5b00;
-}
-
-.status.verified{
-    background:#e4f2ff;
-    color:#07599f;
-}
-
-.status.rejected{
-    background:#ffebeb;
-    color:#b42318;
-}
-
-.status.open{
-    background:#e8f7ee;
-    color:#14733d;
-}
-
-.status.closed{
-    background:#edf0f3;
-    color:#5c6875;
-}
-
-/* BUTTONS */
-
-.small-btn{
-    border:0;
-    padding:7px 10px;
-    border-radius:5px;
-    cursor:pointer;
-    font-size:11px;
-    font-weight:700;
-}
-
-.view-btn{
-    background:#e8f2fb;
-    color:#07599f;
-}
-
-.verify-btn{
-    background:#e8f7ee;
-    color:#14733d;
-}
-
-.reject-btn{
-    background:#ffebeb;
-    color:#b42318;
-}
-
-/* SEARCH */
-
-.search{
+.form-group input,
+.form-group select,
+.form-group textarea{
     width:100%;
-    padding:11px 13px;
-    border:1px solid #d8e0e8;
-    border-radius:7px;
+
+    padding:12px;
+
+    border:1px solid #d6dfe7;
+
+    border-radius:6px;
+
     outline:none;
 }
 
-.search:focus{
-    border-color:#0b75d1;
+.form-group textarea{
+    min-height:100px;
+
+    resize:vertical;
 }
 
-.filters{
-    display:grid;
-    grid-template-columns:2fr 1fr 1fr;
-    gap:10px;
-    margin-bottom:15px;
+.document-box{
+    border:
+    1px dashed #b8c4d0;
+
+    padding:16px;
+
+    border-radius:8px;
+
+    margin-bottom:12px;
 }
 
-.filters select{
-    padding:11px;
-    border:1px solid #d8e0e8;
-    border-radius:7px;
-}
+.document-box strong{
+    display:block;
 
-/* =========================
-   EMPLOYER REQUEST
-========================= */
-
-.request-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:15px;
-}
-
-.request-card{
-    background:#fff;
-    border:1px solid #e1e7ed;
-    border-radius:9px;
-    padding:20px;
-}
-
-.request-card h3{
-    font-size:16px;
     margin-bottom:7px;
 }
 
-.request-card p{
-    color:#64748b;
-    font-size:12px;
-    margin-bottom:6px;
+.form-actions{
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:10px;
+
+    margin-top:20px;
 }
 
-.request-card strong{
+.btn-secondary{
+    background:#e8edf2;
     color:#172033;
 }
 
-.request-footer{
-    border-top:1px solid #edf0f3;
-    margin-top:15px;
-    padding-top:13px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+
+/* =========================================================
+   PAYMENT
+========================================================= */
+
+.payment-card{
+    max-width:500px;
+
+    margin:auto;
+
+    text-align:center;
+
+    padding:25px;
+
+    border:
+    2px solid #0b75d1;
+
+    border-radius:10px;
 }
 
-/* =========================
-   DETAIL PANEL
-========================= */
-
-.detail-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:12px;
-}
-
-.detail{
-    background:#f7f9fc;
-    padding:13px;
-    border-radius:6px;
-}
-
-.detail label{
-    display:block;
+.payment-card h4{
     color:#64748b;
-    font-size:10px;
+
+    font-size:17px;
+}
+
+.payment-amount{
+    color:#0b5cab;
+
+    font-size:37px;
+
+    font-weight:900;
+
+    margin:7px 0;
+}
+
+.payment-method{
+    background:#f3f6f9;
+
+    padding:14px;
+
+    border-radius:7px;
+
+    margin:17px 0;
+}
+
+.payment-method strong{
+    display:block;
+
     margin-bottom:3px;
 }
 
-.detail strong{
-    font-size:13px;
-}
+.payment-status{
+    padding:12px;
 
-/* =========================
-   NOTIFICATION
-========================= */
+    background:#fff6dc;
 
-.notification{
-    position:fixed;
-    right:25px;
-    bottom:25px;
-    background:#172033;
-    color:#fff;
-    padding:14px 18px;
+    color:#825b00;
+
     border-radius:7px;
-    box-shadow:0 10px 30px rgba(0,0,0,.2);
-    display:none;
-    z-index:9999;
+
+    font-size:12px;
+
+    margin-bottom:15px;
+}
+
+.payment-status.success{
+    background:#e9f8ef;
+
+    color:#14733d;
+}
+
+
+/* =========================================================
+   EMPLOYER REQUEST
+========================================================= */
+
+.employer-section{
+    background:#fff;
+}
+
+.employer-wrapper{
+    max-width:900px;
+
+    margin:auto;
+
+    background:#fff;
+
+    border:
+    1px solid #e1e7ed;
+
+    border-radius:11px;
+
+    padding:30px;
+
+    box-shadow:
+    0 7px 25px rgba(0,0,0,.05);
+}
+
+.employer-form-grid{
+    display:grid;
+
+    grid-template-columns:
+    1fr 1fr;
+
+    gap:14px;
+}
+
+.employer-form-group{
+    margin-bottom:13px;
+}
+
+.employer-form-group.full{
+    grid-column:1 / -1;
+}
+
+.employer-form-group label{
+    display:block;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    margin-bottom:5px;
+}
+
+.employer-form-group input,
+.employer-form-group select,
+.employer-form-group textarea{
+    width:100%;
+
+    padding:12px;
+
+    border:
+    1px solid #d6dfe7;
+
+    border-radius:6px;
+
+    outline:none;
+}
+
+.employer-form-group textarea{
+    min-height:110px;
+
+    resize:vertical;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.cta{
+    background:#0b5cab;
+
+    color:#fff;
+
+    text-align:center;
+}
+
+.cta h2{
+    font-size:36px;
+
+    margin-bottom:11px;
+}
+
+.cta p{
+    max-width:650px;
+
+    margin:
+    0 auto 21px;
+
+    color:#dceaf6;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact{
+    background:#f7f9fc;
+}
+
+.contact-grid{
+    display:grid;
+
+    grid-template-columns:
+    1fr 1fr;
+
+    gap:35px;
+}
+
+.contact-info h3{
+    font-size:26px;
+
+    margin-bottom:11px;
+}
+
+.contact-info > p{
+    color:#64748b;
+
+    margin-bottom:15px;
+}
+
+.contact-detail{
+    background:#fff;
+
+    border:
+    1px solid #e1e7ed;
+
+    padding:14px;
+
+    border-radius:7px;
+
+    margin-bottom:10px;
+}
+
+.contact-detail strong{
+    display:block;
+
+    margin-bottom:3px;
+}
+
+.contact-detail a{
+    color:#0b5cab;
+
+    font-weight:600;
+}
+
+.contact-form{
+    background:#fff;
+
+    padding:27px;
+
+    border-radius:10px;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,.05);
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+
+    padding:12px;
+
+    border:
+    1px solid #d8e0e8;
+
+    border-radius:6px;
+
+    margin-bottom:12px;
+}
+
+.contact-form textarea{
+    min-height:115px;
+}
+
+.contact-form button{
+    width:100%;
+
+    background:#0b5cab;
+
+    color:#fff;
+
+    border:0;
+
+    padding:13px;
+
+    border-radius:6px;
+
+    font-weight:700;
+
+    cursor:pointer;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+    background:#0d1726;
+
+    color:#fff;
+
+    padding:43px 22px 18px;
+}
+
+.footer-grid{
+    max-width:1150px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    2fr 1fr 1fr;
+
+    gap:35px;
+}
+
+footer h3{
+    margin-bottom:11px;
+}
+
+footer p,
+footer li,
+footer a{
+    color:#aeb9c8;
+
     font-size:13px;
 }
 
-/* =========================
+footer ul{
+    list-style:none;
+}
+
+footer li{
+    margin-bottom:7px;
+}
+
+footer a:hover{
+    color:#fff;
+}
+
+.copyright{
+    max-width:1150px;
+
+    margin:25px auto 0;
+
+    padding-top:17px;
+
+    border-top:
+    1px solid rgba(255,255,255,.1);
+
+    text-align:center;
+
+    color:#8794a3;
+
+    font-size:12px;
+}
+
+
+/* =========================================================
    MOBILE
-========================= */
+========================================================= */
 
-.mobile-menu{
-    display:none;
-}
+@media(max-width:900px){
 
-@media(max-width:1100px){
-
-    .stats{
-        grid-template-columns:repeat(3,1fr);
+    nav ul{
+        display:none;
     }
 
-    .request-grid{
-        grid-template-columns:1fr 1fr;
-    }
-}
-
-@media(max-width:800px){
-
-    .sidebar{
-        width:210px;
+    .hero h2{
+        font-size:41px;
     }
 
-    .main{
-        margin-left:210px;
+    .search-grid{
+        grid-template-columns:
+        1fr 1fr;
     }
 
-    .stats{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .request-grid{
+    .side-grid,
+    .verification-grid,
+    .contact-grid{
         grid-template-columns:1fr;
     }
 
-    .filters{
-        grid-template-columns:1fr;
+    .steps{
+        grid-template-columns:
+        1fr 1fr;
     }
+
+    .category-grid{
+        grid-template-columns:
+        1fr 1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:
+        1fr 1fr;
+    }
+
 }
 
 @media(max-width:600px){
 
-    .sidebar{
-        position:relative;
+    .hero{
+        min-height:480px;
+    }
+
+    .hero-container{
+        padding:50px 19px;
+    }
+
+    .hero h2{
+        font-size:34px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    section{
+        padding:58px 19px;
+    }
+
+    .search-box{
+        margin:-23px 13px 0;
+    }
+
+    .search-grid,
+    .form-grid,
+    .employer-form-grid,
+    .steps,
+    .category-grid,
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .form-group.full,
+    .employer-form-group.full{
+        grid-column:auto;
+    }
+
+    .form-step{
+        padding:22px;
+    }
+
+    .form-actions{
+        flex-direction:column;
+    }
+
+    .form-actions .btn{
         width:100%;
-        height:auto;
     }
 
-    .main{
-        margin-left:0;
+    .progress-item{
+        font-size:9px;
     }
 
-    .topbar{
-        padding:0 15px;
-    }
-
-    .content{
-        padding:18px;
-    }
-
-    .stats{
-        grid-template-columns:1fr;
-    }
-
-    .detail-grid{
-        grid-template-columns:1fr;
-    }
 }
 
 </style>
+
 </head>
+
 
 <body>
 
 
-<!-- ==================================================
-     LOGIN PAGE
-================================================== -->
+<!-- =========================================================
+     HEADER
+========================================================= -->
 
-<div class="login-page" id="loginPage">
+<header>
 
-<div class="login-box">
+<div class="navbar">
 
-<div class="login-logo">
+<a href="#home" class="logo">
+
+<div class="logo-mark">
 SDN
 </div>
 
+<div class="logo-text">
+
 <h1>
-SDN Admin Portal
+Smart Driver Network
 </h1>
 
-<p class="subtitle">
-Smart Driver Network Management System
+<span>
+CONNECTING DRIVERS & EMPLOYERS
+</span>
+
+</div>
+
+</a>
+
+
+<nav>
+
+<ul>
+
+<li>
+<a href="#home">
+Home
+</a>
+</li>
+
+<li>
+<a href="#how">
+How It Works
+</a>
+</li>
+
+<li>
+<a href="#drivers">
+For Drivers
+</a>
+</li>
+
+<li>
+<a href="#employers">
+For Employers
+</a>
+</li>
+
+<li>
+<a href="#contact">
+Contact
+</a>
+</li>
+
+<li>
+<a
+href="#registration"
+class="nav-register">
+Register
+</a>
+</li>
+
+</ul>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section
+class="hero"
+id="home">
+
+<div class="hero-container">
+
+<div class="hero-content">
+
+<div class="hero-badge">
+
+TANZANIA'S PROFESSIONAL DRIVER NETWORK
+
+</div>
+
+
+<h2>
+
+Connecting
+<span>Professional Drivers</span>
+with Trusted Employers
+
+</h2>
+
+
+<p>
+
+Smart Driver Network (SDN) connects qualified
+professional drivers with companies, institutions
+and organizations looking for the right driver
+for the right vehicle and opportunity.
+
 </p>
 
 
-<div class="login-group">
+<div class="hero-buttons">
+
+<a
+href="#registration"
+class="btn btn-primary">
+
+Register as Driver
+
+</a>
+
+
+<a
+href="#employers"
+class="btn btn-outline">
+
+I'm an Employer
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     SEARCH
+========================================================= -->
+
+<div class="search-box">
+
+<div class="search-title">
+
+<h3>
+Find the Right Driver
+</h3>
+
+<p>
+Search according to vehicle category,
+experience and location.
+</p>
+
+</div>
+
+
+<div class="search-grid">
+
+<input
+type="text"
+id="searchCategory"
+placeholder="Driver category">
+
+
+<select
+id="searchVehicle">
+
+<option value="">
+Select Vehicle
+</option>
+
+<option>
+Truck
+</option>
+
+<option>
+Bus
+</option>
+
+<option>
+Tanker / Fuel
+</option>
+
+<option>
+Mining Vehicle
+</option>
+
+<option>
+Construction Vehicle
+</option>
+
+<option>
+Personal / Corporate
+</option>
+
+</select>
+
+
+<input
+type="text"
+id="searchLocation"
+placeholder="Location">
+
+
+<button
+type="button"
+onclick="searchDrivers()">
+
+Search
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- =========================================================
+     DRIVER / EMPLOYER
+========================================================= -->
+
+<section
+class="two-sides">
+
+<div class="container">
+
+
+<div class="section-heading">
+
+<h2>
+One Network. Two Opportunities.
+</h2>
+
+<p>
+
+Whether you are a professional driver looking
+for an opportunity or an employer looking for
+a qualified driver, SDN connects you.
+
+</p>
+
+</div>
+
+
+<div class="side-grid">
+
+
+<!-- DRIVER -->
+
+<div
+class="side-card driver"
+id="drivers">
+
+<h3>
+For Professional Drivers
+</h3>
+
+<p>
+
+Build your professional profile,
+upload your documents and apply
+for SDN verification.
+
+</p>
+
+
+<ul>
+
+<li>
+Create your professional profile
+</li>
+
+<li>
+Add driving licence information
+</li>
+
+<li>
+Add driving experience
+</li>
+
+<li>
+Upload certificates and documents
+</li>
+
+<li>
+Pay TZS 10,000 verification fee
+</li>
+
+<li>
+Receive verification status
+</li>
+
+</ul>
+
+
+<a
+href="#registration"
+class="btn btn-primary">
+
+Register as Driver
+
+</a>
+
+</div>
+
+
+<!-- EMPLOYER -->
+
+<div
+class="side-card employer"
+id="employers">
+
+<h3>
+For Employers & Organizations
+</h3>
+
+<p>
+
+Companies, institutions and organizations
+can request professional drivers according
+to their requirements.
+
+</p>
+
+
+<ul>
+
+<li>
+Search verified drivers
+</li>
+
+<li>
+Request one or more drivers
+</li>
+
+<li>
+Specify vehicle requirements
+</li>
+
+<li>
+Specify experience required
+</li>
+
+<li>
+Choose location
+</li>
+
+<li>
+Connect with suitable drivers
+</li>
+
+</ul>
+
+
+<a
+href="#employer-request"
+class="btn btn-dark">
+
+Request Drivers
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     HOW IT WORKS
+========================================================= -->
+
+<section
+id="how">
+
+<div class="container">
+
+
+<div class="section-heading">
+
+<h2>
+How SDN Works
+</h2>
+
+<p>
+
+A simple process designed to connect
+professional drivers with trusted employers.
+
+</p>
+
+</div>
+
+
+<div class="steps">
+
+
+<div class="step">
+
+<div class="step-number">
+01
+</div>
+
+<h3>
+Register
+</h3>
+
+<p>
+Create your professional driver profile.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">
+02
+</div>
+
+<h3>
+Upload
+</h3>
+
+<p>
+Upload your licence and certificates.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">
+03
+</div>
+
+<h3>
+Pay & Submit
+</h3>
+
+<p>
+Pay the TZS 10,000 verification fee.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">
+04
+</div>
+
+<h3>
+Get Verified
+</h3>
+
+<p>
+SDN reviews your documents and
+updates your verification status.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     DRIVER CATEGORIES
+========================================================= -->
+
+<section
+class="categories">
+
+<div class="container">
+
+
+<div class="section-heading">
+
+<h2>
+Driver Categories
+</h2>
+
+<p>
+
+Professional drivers for different
+industries and vehicle categories.
+
+</p>
+
+</div>
+
+
+<div class="category-grid">
+
+
+<div class="category">
+
+<div class="category-icon">
+🚛
+</div>
+
+<h3>
+Truck Drivers
+</h3>
+
+<p>
+Cargo, logistics and long-distance transport.
+</p>
+
+</div>
+
+
+<div class="category">
+
+<div class="category-icon">
+🚌
+</div>
+
+<h3>
+Bus Drivers
+</h3>
+
+<p>
+Passenger, corporate and public transport.
+</p>
+
+</div>
+
+
+<div class="category">
+
+<div class="category-icon">
+⛽
+</div>
+
+<h3>
+Tanker / Fuel Drivers
+</h3>
+
+<p>
+Fuel and tanker transportation operations.
+</p>
+
+</div>
+
+
+<div class="category">
+
+<div class="category-icon">
+⛏️
+</div>
+
+<h3>
+Mining Drivers
+</h3>
+
+<p>
+Mining and heavy vehicle operations.
+</p>
+
+</div>
+
+
+<div class="category">
+
+<div class="category-icon">
+🏗️
+</div>
+
+<h3>
+Construction Drivers
+</h3>
+
+<p>
+Construction and project logistics.
+</p>
+
+</div>
+
+
+<div class="category">
+
+<div class="category-icon">
+🚘
+</div>
+
+<h3>
+Personal & Corporate
+</h3>
+
+<p>
+Professional personal and corporate drivers.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     VERIFICATION
+========================================================= -->
+
+<section
+class="verification">
+
+<div class="container">
+
+
+<div class="verification-grid">
+
+
+<div>
+
+<h2>
+Built Around Trust & Verification
+</h2>
+
+<p>
+
+SDN is designed to help employers identify
+professional drivers based on qualifications,
+experience and verified documents.
+
+</p>
+
+
+<ul class="verification-list">
+
+<li>
+Driving licence information
+</li>
+
+<li>
+Professional experience
+</li>
+
+<li>
+Vehicle categories
+</li>
+
+<li>
+Professional certificates
+</li>
+
+<li>
+Verification status
+</li>
+
+</ul>
+
+</div>
+
+
+<div class="verification-box">
+
+<h3>
+SDN Driver Verification
+</h3>
+
+<p>
+
+Drivers complete their profile,
+upload their documents and pay the
+TZS 10,000 verification fee before
+their application is submitted.
+
+</p>
+
+<br>
+
+<a
+href="#registration"
+class="btn btn-primary">
+
+Start Registration
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     COUNTRIES
+========================================================= -->
+
+<section
+class="countries">
+
+<div class="container">
+
+
+<div class="section-heading">
+
+<h2>
+Starting in Tanzania. Built for Africa.
+</h2>
+
+<p>
+
+SDN will start in Tanzania before expanding
+into selected African markets.
+
+</p>
+
+</div>
+
+
+<div class="country-list">
+
+<div class="country active">
+Tanzania
+</div>
+
+<div class="country">
+Malawi
+</div>
+
+<div class="country">
+Mozambique
+</div>
+
+<div class="country">
+Zimbabwe
+</div>
+
+<div class="country">
+Algeria
+</div>
+
+<div class="country">
+Zambia
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     DRIVER REGISTRATION
+========================================================= -->
+
+<section
+class="registration"
+id="registration">
+
+<div class="container">
+
+
+<div class="registration-wrapper">
+
+
+<div class="registration-header">
+
+<h2>
+SDN Driver Registration
+</h2>
+
+<p>
+
+Complete your information,
+upload documents and submit
+your application for verification.
+
+</p>
+
+</div>
+
+
+<div class="progress">
+
+<div
+class="progress-item active"
+id="progress1">
+
+1. Personal
+
+</div>
+
+
+<div
+class="progress-item"
+id="progress2">
+
+2. Driving
+
+</div>
+
+
+<div
+class="progress-item"
+id="progress3">
+
+3. Documents
+
+</div>
+
+
+<div
+class="progress-item"
+id="progress4">
+
+4. Payment
+
+</div>
+
+
+<div
+class="progress-item"
+id="progress5">
+
+5. Submit
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     STEP 1
+===================================================== -->
+
+<div
+class="form-step active"
+id="step1">
+
+<h3>
+Personal Information
+</h3>
+
+
+<div class="form-grid">
+
+
+<div class="form-group">
 
 <label>
-Admin Email
+Full Name *
+</label>
+
+<input
+type="text"
+id="fullName"
+placeholder="Enter full name">
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Phone Number *
+</label>
+
+<input
+type="tel"
+id="driverPhone"
+placeholder="07XXXXXXXX">
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Email Address
 </label>
 
 <input
 type="email"
-id="adminEmail"
-placeholder="Admin email">
+id="driverEmail"
+placeholder="example@email.com">
 
 </div>
 
 
-<div class="login-group">
+<div class="form-group">
 
 <label>
-Password
+Location *
 </label>
 
 <input
-type="password"
-id="adminPassword"
-placeholder="Password">
+type="text"
+id="driverLocation"
+placeholder="City / Region">
 
 </div>
 
 
-<button
-class="login-button"
-onclick="adminLogin()">
-
-Login to Dashboard
-
-</button>
-
-
-<div
-class="login-message"
-id="loginMessage">
-
-Invalid login details.
-
-</div>
-
-<p style="
-text-align:center;
-font-size:10px;
-color:#8793a0;
-margin-top:20px;
-">
-
-SDN Admin Access
-
-</p>
-
-</div>
-
-</div>
-
-
-<!-- ==================================================
-     ADMIN APPLICATION
-================================================== -->
-
-<div class="admin-app" id="adminApp">
-
-
-<!-- SIDEBAR -->
-
-<aside class="sidebar">
-
-<div class="admin-brand">
-
-<div class="admin-logo">
-SDN
-</div>
-
-<div>
-
-<strong>
-SDN Admin
-</strong>
-
-<span>
-Smart Driver Network
-</span>
-
-</div>
-
-</div>
-
-
-<div class="menu-title">
-Main
-</div>
-
-
-<button
-class="active"
-onclick="showPage('dashboard',this)">
-
-📊 Dashboard
-
-</button>
-
-
-<button
-onclick="showPage('drivers',this)">
-
-👤 Drivers
-
-</button>
-
-
-<button
-onclick="showPage('verification',this)">
-
-✓ Verification
-
-</button>
-
-
-<button
-onclick="showPage('documents',this)">
-
-📄 Documents
-
-</button>
-
-
-<div class="menu-title">
-Employers
-</div>
-
-
-<button
-onclick="showPage('employers',this)">
-
-🏢 Employers / Organizations
-
-</button>
-
-
-<button
-onclick="showPage('requests',this)">
-
-📋 Driver Requests
-
-</button>
-
-
-<div class="menu-title">
-Finance
-</div>
-
-
-<button
-onclick="showPage('payments',this)">
-
-💳 Payments
-
-</button>
-
-
-<div class="menu-title">
-System
-</div>
-
-
-<button
-onclick="showPage('settings',this)">
-
-⚙ Settings
-
-</button>
-
-
-<button
-class="logout"
-onclick="logout()">
-
-↪ Logout
-
-</button>
-
-</aside>
-
-
-<!-- MAIN -->
-
-<main class="main">
-
-
-<!-- TOPBAR -->
-
-<div class="topbar">
-
-<h2 id="topTitle">
-Dashboard
-</h2>
-
-<div class="admin-user">
-
-<span>
-Administrator
-</span>
-
-<div class="admin-avatar">
-A
-</div>
-
-</div>
-
-</div>
-
-
-<div class="content">
-
-
-<!-- ==================================================
-     DASHBOARD
-================================================== -->
-
-<section
-class="page active"
-id="dashboard">
-
-<div class="page-title">
-
-<h1>
-Dashboard
-</h1>
-
-<p>
-Smart Driver Network overview
-</p>
-
-</div>
-
-
-<div class="stats">
-
-<div class="stat blue">
-
-<div class="stat-label">
-Total Drivers
-</div>
-
-<div
-class="stat-number"
-id="totalDrivers">
-0
-</div>
-
-</div>
-
-
-<div class="stat orange">
-
-<div class="stat-label">
-Pending Verification
-</div>
-
-<div
-class="stat-number"
-id="pendingDrivers">
-0
-</div>
-
-</div>
-
-
-<div class="stat green">
-
-<div class="stat-label">
-Verified Drivers
-</div>
-
-<div
-class="stat-number"
-id="verifiedDrivers">
-0
-</div>
-
-</div>
-
-
-<div class="stat dark">
-
-<div class="stat-label">
-Employers
-</div>
-
-<div
-class="stat-number"
-id="totalEmployers">
-0
-</div>
-
-</div>
-
-
-<div class="stat red">
-
-<div class="stat-label">
-Open Driver Requests
-</div>
-
-<div
-class="stat-number"
-id="openRequests">
-0
-</div>
-
-</div>
-
-</div>
-
-
-<div class="card">
-
-<div class="card-header">
-
-<h3>
-Recent Driver Applications
-</h3>
-
-<button
-class="small-btn view-btn"
-onclick="showPageById('drivers')">
-
-View All
-
-</button>
-
-</div>
-
-
-<div class="card-body">
-
-<div class="table-wrap">
-
-<table>
-
-<thead>
-
-<tr>
-
-<th>
-Driver
-</th>
-
-<th>
-Phone
-</th>
-
-<th>
-Vehicle
-</th>
-
-<th>
-Payment
-</th>
-
-<th>
-Verification
-</th>
-
-<th>
-Action
-</th>
-
-</tr>
-
-</thead>
-
-<tbody id="dashboardDrivers">
-
-</tbody>
-
-</table>
-
-</div>
-
-</div>
-
-</div>
-
-
-<div class="card">
-
-<div class="card-header">
-
-<h3>
-Latest Employer Requests
-</h3>
-
-<button
-class="small-btn view-btn"
-onclick="showPageById('requests')">
-
-View All
-
-</button>
-
-</div>
-
-
-<div class="card-body">
-
-<div class="table-wrap">
-
-<table>
-
-<thead>
-
-<tr>
-
-<th>
-Organization
-</th>
-
-<th>
-Drivers
-</th>
-
-<th>
-Vehicle
-</th>
-
-<th>
-Location
-</th>
-
-<th>
-Status
-</th>
-
-</tr>
-
-</thead>
-
-<tbody id="dashboardRequests">
-
-</tbody>
-
-</table>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ==================================================
-     DRIVERS
-================================================== -->
-
-<section
-class="page"
-id="drivers">
-
-<div class="page-title">
-
-<h1>
-Drivers
-</h1>
-
-<p>
-Manage all driver applications.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<div class="card-body">
-
-<div class="filters">
+<div class="form-group">
+
+<label>
+Date of Birth
+</label>
 
 <input
-class="search"
-id="driverSearch"
-onkeyup="filterDrivers()"
-placeholder="Search name, phone, licence or Driver ID">
+type="date"
+id="dateOfBirth">
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Gender
+</label>
 
 <select
-id="driverStatus"
-onchange="filterDrivers()">
+id="gender">
 
 <option value="">
-All Status
+Select
 </option>
 
-<option value="Pending">
-Pending
+<option>
+Male
 </option>
 
-<option value="Verified">
-Verified
-</option>
-
-<option value="Rejected">
-Rejected
-</option>
-
-</select>
-
-
-<select
-id="driverPayment"
-onchange="filterDrivers()">
-
-<option value="">
-All Payments
-</option>
-
-<option value="Paid">
-Paid
-</option>
-
-<option value="Pending">
-Pending
+<option>
+Female
 </option>
 
 </select>
 
 </div>
 
+</div>
 
-<div class="table-wrap">
 
-<table>
+<div class="form-actions">
 
-<thead>
+<div></div>
 
-<tr>
+<button
+type="button"
+class="btn btn-primary"
+onclick="nextStep(2)">
 
-<th>
-Driver ID
-</th>
+Continue
 
-<th>
-Name
-</th>
-
-<th>
-Phone
-</th>
-
-<th>
-Licence
-</th>
-
-<th>
-Vehicle
-</th>
-
-<th>
-Payment
-</th>
-
-<th>
-Status
-</th>
-
-<th>
-Action
-</th>
-
-</tr>
-
-</thead>
-
-<tbody id="driversTable">
-
-</tbody>
-
-</table>
+</button>
 
 </div>
 
 </div>
 
-</div>
 
-</section>
+<!-- =====================================================
+     STEP 2
+===================================================== -->
 
-
-<!-- ==================================================
-     VERIFICATION
-================================================== -->
-
-<section
-class="page"
-id="verification">
-
-<div class="page-title">
-
-<h1>
-Driver Verification
-</h1>
-
-<p>
-Review applications and verify professional drivers.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<div class="card-header">
+<div
+class="form-step"
+id="step2">
 
 <h3>
-Pending Verification
+Driving Information
 </h3>
 
-</div>
 
-<div class="card-body">
+<div class="form-grid">
 
-<div class="table-wrap">
 
-<table>
+<div class="form-group">
 
-<thead>
+<label>
+Driving Licence Number *
+</label>
 
-<tr>
-
-<th>
-Driver ID
-</th>
-
-<th>
-Driver
-</th>
-
-<th>
-Vehicle
-</th>
-
-<th>
-Experience
-</th>
-
-<th>
-Payment
-</th>
-
-<th>
-Documents
-</th>
-
-<th>
-Action
-</th>
-
-</tr>
-
-</thead>
-
-<tbody id="verificationTable">
-
-</tbody>
-
-</table>
+<input
+type="text"
+id="licenceNumber"
+placeholder="Licence number">
 
 </div>
 
+
+<div class="form-group">
+
+<label>
+Licence Class *
+</label>
+
+<select
+id="licenceClass">
+
+<option value="">
+Select class
+</option>
+
+<option>
+Class A
+</option>
+
+<option>
+Class B
+</option>
+
+<option>
+Class C
+</option>
+
+<option>
+Class D
+</option>
+
+<option>
+Class E
+</option>
+
+<option>
+Class F
+</option>
+
+<option>
+Class G
+</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Years of Experience *
+</label>
+
+<select
+id="experience">
+
+<option value="">
+Select
+</option>
+
+<option>
+Less than 1 year
+</option>
+
+<option>
+1 - 3 years
+</option>
+
+<option>
+4 - 6 years
+</option>
+
+<option>
+7 - 10 years
+</option>
+
+<option>
+More than 10 years
+</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group">
+
+<label>
+Primary Vehicle *
+</label>
+
+<select
+id="vehicleCategory">
+
+<option value="">
+Select
+</option>
+
+<option>
+Truck
+</option>
+
+<option>
+Bus
+</option>
+
+<option>
+Tanker / Fuel
+</option>
+
+<option>
+Mining
+</option>
+
+<option>
+Construction
+</option>
+
+<option>
+Personal / Corporate
+</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group full">
+
+<label>
+Other Vehicle Categories
+</label>
+
+<input
+type="text"
+id="otherVehicles"
+placeholder="Other vehicles you can operate">
+
+</div>
+
+
+<div class="form-group full">
+
+<label>
+Driving Experience
+</label>
+
+<textarea
+id="drivingExperience"
+placeholder="Describe your professional driving experience">
+</textarea>
+
 </div>
 
 </div>
 
-</section>
+
+<div class="form-actions">
+
+<button
+type="button"
+class="btn btn-secondary"
+onclick="nextStep(1)">
+
+Back
+
+</button>
 
 
-<!-- ==================================================
-     DOCUMENTS
-================================================== -->
+<button
+type="button"
+class="btn btn-primary"
+onclick="nextStep(3)">
 
-<section
-class="page"
-id="documents">
+Continue
 
-<div class="page-title">
+</button>
 
-<h1>
-Documents
-</h1>
+</div>
 
-<p>
-Driver licences and certificates submitted for verification.
+</div>
+
+
+<!-- =====================================================
+     STEP 3
+===================================================== -->
+
+<div
+class="form-step"
+id="step3">
+
+<h3>
+Upload Documents
+</h3>
+
+<p
+style="
+color:#64748b;
+font-size:13px;
+margin-bottom:18px;
+">
+
+Upload clear copies of your documents.
+Final verification will be performed by SDN.
+
 </p>
 
+
+<div class="document-box">
+
+<strong>
+Driving Licence *
+</strong>
+
+<input
+type="file"
+id="licenceFile"
+accept=".jpg,.jpeg,.png,.pdf">
+
 </div>
 
 
-<div class="card">
+<div class="document-box">
 
-<div class="card-body">
+<strong>
+Professional Certificate
+</strong>
 
-<div class="table-wrap">
+<input
+type="file"
+id="certificateFile"
+accept=".jpg,.jpeg,.png,.pdf">
 
-<table>
+</div>
 
-<thead>
 
-<tr>
+<div class="document-box">
 
-<th>
-Driver ID
-</th>
+<strong>
+Additional Certificate
+</strong>
 
-<th>
-Driver
-</th>
+<input
+type="file"
+id="additionalFile"
+accept=".jpg,.jpeg,.png,.pdf">
 
-<th>
-Licence
-</th>
+</div>
 
-<th>
-Certificate
-</th>
 
-<th>
+<div class="document-box">
+
+<strong>
 Profile Photo
-</th>
+</strong>
 
-<th>
-Document Status
-</th>
-
-<th>
-Action
-</th>
-
-</tr>
-
-</thead>
-
-<tbody id="documentsTable">
-
-</tbody>
-
-</table>
+<input
+type="file"
+id="profilePhoto"
+accept=".jpg,.jpeg,.png">
 
 </div>
 
-</div>
 
-</div>
+<p
+style="
+font-size:11px;
+color:#64748b;
+">
 
-</section>
+Accepted formats: JPG, PNG and PDF.
 
-
-<!-- ==================================================
-     EMPLOYERS
-================================================== -->
-
-<section
-class="page"
-id="employers">
-
-<div class="page-title">
-
-<h1>
-Employers / Organizations
-</h1>
-
-<p>
-Companies, institutions and organizations using SDN.
 </p>
 
+
+<div class="form-actions">
+
+<button
+type="button"
+class="btn btn-secondary"
+onclick="nextStep(2)">
+
+Back
+
+</button>
+
+
+<button
+type="button"
+class="btn btn-primary"
+onclick="nextStep(4)">
+
+Continue to Payment
+
+</button>
+
+</div>
+
 </div>
 
 
-<div class="card">
+<!-- =====================================================
+     STEP 4 PAYMENT
+===================================================== -->
 
-<div class="card-header">
+<div
+class="form-step"
+id="step4">
 
 <h3>
-Registered Employers
+Verification Payment
 </h3>
 
-</div>
+
+<div class="payment-card">
+
+<h4>
+SDN Driver Verification Fee
+</h4>
 
 
-<div class="card-body">
+<div class="payment-amount">
 
-<div class="table-wrap">
-
-<table>
-
-<thead>
-
-<tr>
-
-<th>
-Organization
-</th>
-
-<th>
-Contact Person
-</th>
-
-<th>
-Phone
-</th>
-
-<th>
-Email
-</th>
-
-<th>
-Location
-</th>
-
-<th>
-Requests
-</th>
-
-<th>
-Status
-</th>
-
-</tr>
-
-</thead>
-
-<tbody id="employersTable">
-
-</tbody>
-
-</table>
+TZS 10,000
 
 </div>
 
-</div>
 
-</div>
+<div class="payment-method">
 
-</section>
+<strong>
+Vodacom M-Pesa
+</strong>
 
-
-<!-- ==================================================
-     DRIVER REQUESTS
-================================================== -->
-
-<section
-class="page"
-id="requests">
-
-<div class="page-title">
-
-<h1>
-Driver Requests
-</h1>
-
-<p>
-See organizations requesting professional drivers.
-</p>
+0766669666
 
 </div>
 
 
 <div
-class="request-grid"
-id="requestGrid">
+class="payment-status"
+id="paymentStatus">
+
+Your application must be paid and
+payment confirmed before submission.
 
 </div>
 
-</section>
+
+<button
+type="button"
+class="btn btn-primary"
+onclick="requestPayment()">
+
+PAY TZS 10,000
+
+</button>
 
 
-<!-- ==================================================
-     PAYMENTS
-================================================== -->
+<p
+style="
+font-size:11px;
+color:#64748b;
+margin-top:13px;
+">
 
-<section
-class="page"
-id="payments">
+Payment confirmation will be connected
+to the official SDN payment gateway.
 
-<div class="page-title">
-
-<h1>
-Payments
-</h1>
-
-<p>
-Track SDN driver verification payments.
 </p>
 
 </div>
 
 
-<div class="stats">
+<div class="form-actions">
 
-<div class="stat green">
+<button
+type="button"
+class="btn btn-secondary"
+onclick="nextStep(3)">
 
-<div class="stat-label">
-Total Paid
+Back
+
+</button>
+
+
+<button
+type="button"
+class="btn btn-primary"
+id="continueAfterPayment"
+disabled
+onclick="nextStep(5)">
+
+Continue
+
+</button>
+
 </div>
+
+</div>
+
+
+<!-- =====================================================
+     STEP 5
+===================================================== -->
 
 <div
-class="stat-number"
-id="totalPaid">
-0
-</div>
-
-</div>
-
-
-<div class="stat blue">
-
-<div class="stat-label">
-Revenue
-</div>
-
-<div
-class="stat-number"
-id="totalRevenue">
-TZS 0
-</div>
-
-</div>
-
-</div>
-
-
-<div class="card">
-
-<div class="card-body">
-
-<div class="table-wrap">
-
-<table>
-
-<thead>
-
-<tr>
-
-<th>
-Transaction
-</th>
-
-<th>
-Driver
-</th>
-
-<th>
-Phone
-</th>
-
-<th>
-Amount
-</th>
-
-<th>
-Method
-</th>
-
-<th>
-Status
-</th>
-
-<th>
-Date
-</th>
-
-</tr>
-
-</thead>
-
-<tbody id="paymentsTable">
-
-</tbody>
-
-</table>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ==================================================
-     SETTINGS
-================================================== -->
-
-<section
-class="page"
-id="settings">
-
-<div class="page-title">
-
-<h1>
-Settings
-</h1>
-
-<p>
-SDN administration settings.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<div class="card-body">
+class="form-step"
+id="step5">
 
 <h3>
-SDN Contact Information
+Review & Submit
 </h3>
+
+
+<div
+id="reviewBox"
+style="
+background:#f5f8fb;
+padding:20px;
+border-radius:8px;
+margin-bottom:18px;
+">
+</div>
+
+
+<div
+class="payment-status success">
+
+✓ Payment confirmed.
 
 <br>
 
-<p>
-<strong>Phone:</strong>
-0766669666 / 0715056883
+Your application is ready
+for submission.
+
+</div>
+
+
+<div class="form-actions">
+
+<button
+type="button"
+class="btn btn-secondary"
+onclick="nextStep(4)">
+
+Back
+
+</button>
+
+
+<button
+type="button"
+class="btn btn-primary"
+onclick="submitDriver()">
+
+SUBMIT FOR VERIFICATION
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- =====================================================
+     SUCCESS
+===================================================== -->
+
+<div
+class="form-step"
+id="successStep">
+
+<div
+style="
+text-align:center;
+padding:35px 15px;
+">
+
+<div
+style="
+width:65px;
+height:65px;
+margin:auto;
+border-radius:50%;
+background:#e9f8ef;
+color:#168044;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:32px;
+">
+
+✓
+
+</div>
+
+
+<h2
+style="
+margin-top:15px;
+">
+
+Application Submitted
+
+</h2>
+
+
+<p
+style="
+color:#64748b;
+margin-top:8px;
+">
+
+Your SDN Driver Verification
+application has been submitted.
+
 </p>
 
-<p>
-<strong>Email:</strong>
-sdn.ltd23@gmail.com
-</p>
+
+<div
+id="applicationNumber"
+style="
+display:inline-block;
+margin:17px 0;
+padding:11px 18px;
+background:#f1f5f9;
+border-radius:7px;
+font-weight:800;
+">
+
+SDN-TZ-00001
+
+</div>
+
 
 <p>
-<strong>Verification Fee:</strong>
-TZS 10,000
+
+Status:
+
+<strong
+style="
+color:#c28200;
+">
+
+Pending Verification
+
+</strong>
+
 </p>
 
-<p>
-<strong>Payment Method:</strong>
-Vodacom M-Pesa
+
+<p
+style="
+font-size:12px;
+color:#64748b;
+margin-top:12px;
+">
+
+Please keep your application number
+for future reference.
+
 </p>
 
-<p>
-<strong>Payment Number:</strong>
-0766669666
-</p>
+</div>
+
+</div>
 
 </div>
 
@@ -1726,1154 +2845,1059 @@ Vodacom M-Pesa
 </section>
 
 
+<!-- =========================================================
+     EMPLOYER REQUEST
+========================================================= -->
+
+<section
+class="employer-section"
+id="employer-request">
+
+<div class="container">
+
+
+<div class="section-heading">
+
+<h2>
+Request Professional Drivers
+</h2>
+
+<p>
+
+Companies, institutions and organizations
+can submit their driver requirements to SDN.
+
+</p>
+
 </div>
 
-</main>
+
+<div class="employer-wrapper">
+
+<form
+id="employerForm">
+
+
+<div class="employer-form-grid">
+
+
+<div class="employer-form-group">
+
+<label>
+Organization / Company Name *
+</label>
+
+<input
+type="text"
+id="organizationName"
+placeholder="Organization name">
 
 </div>
 
 
-<!-- NOTIFICATION -->
+<div class="employer-form-group">
+
+<label>
+Contact Person *
+</label>
+
+<input
+type="text"
+id="contactPerson"
+placeholder="Contact person">
+
+</div>
+
+
+<div class="employer-form-group">
+
+<label>
+Phone Number *
+</label>
+
+<input
+type="tel"
+id="employerPhone"
+placeholder="07XXXXXXXX">
+
+</div>
+
+
+<div class="employer-form-group">
+
+<label>
+Email Address *
+</label>
+
+<input
+type="email"
+id="employerEmail"
+placeholder="company@email.com">
+
+</div>
+
+
+<div class="employer-form-group">
+
+<label>
+Location *
+</label>
+
+<input
+type="text"
+id="employerLocation"
+placeholder="City / Region">
+
+</div>
+
+
+<div class="employer-form-group">
+
+<label>
+Number of Drivers Needed *
+</label>
+
+<input
+type="number"
+id="driversNeeded"
+min="1"
+placeholder="e.g. 5">
+
+</div>
+
+
+<div class="employer-form-group">
+
+<label>
+Vehicle Category *
+</label>
+
+<select
+id="employerVehicle">
+
+<option value="">
+Select vehicle
+</option>
+
+<option>
+Truck
+</option>
+
+<option>
+Bus
+</option>
+
+<option>
+Tanker / Fuel
+</option>
+
+<option>
+Mining Vehicle
+</option>
+
+<option>
+Construction Vehicle
+</option>
+
+<option>
+SUV / Corporate
+</option>
+
+<option>
+Other
+</option>
+
+</select>
+
+</div>
+
+
+<div class="employer-form-group">
+
+<label>
+Minimum Experience
+</label>
+
+<select
+id="requiredExperience">
+
+<option value="">
+Select
+</option>
+
+<option>
+1+ year
+</option>
+
+<option>
+3+ years
+</option>
+
+<option>
+5+ years
+</option>
+
+<option>
+7+ years
+</option>
+
+<option>
+10+ years
+</option>
+
+</select>
+
+</div>
+
+
+<div class="employer-form-group">
+
+<label>
+Licence Requirement
+</label>
+
+<input
+type="text"
+id="requiredLicence"
+placeholder="e.g. Class C/E">
+
+</div>
+
+
+<div class="employer-form-group">
+
+<label>
+Application Deadline
+</label>
+
+<input
+type="date"
+id="deadline">
+
+</div>
+
+
+<div class="employer-form-group full">
+
+<label>
+Job Description / Requirements
+</label>
+
+<textarea
+id="jobDescription"
+placeholder="Describe the drivers you need, duties, experience and other requirements">
+</textarea>
+
+</div>
+
+</div>
+
 
 <div
-class="notification"
-id="notification">
+style="
+margin-top:18px;
+">
+
+<button
+type="submit"
+class="btn btn-primary">
+
+SEND DRIVER REQUEST
+
+</button>
+
 </div>
 
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section
+class="cta">
+
+<div class="container">
+
+<h2>
+Ready to Connect?
+</h2>
+
+<p>
+
+Join Smart Driver Network and become part
+of a professional network connecting
+drivers and employers.
+
+</p>
+
+
+<a
+href="#registration"
+class="btn btn-light">
+
+Register as Driver
+
+</a>
+
+
+<a
+href="#employer-request"
+class="btn btn-outline"
+style="margin-left:7px;">
+
+Request Drivers
+
+</a>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section
+class="contact"
+id="contact">
+
+<div class="container">
+
+
+<div class="section-heading">
+
+<h2>
+Contact Smart Driver Network
+</h2>
+
+<p>
+
+For driver registration, employer enquiries,
+partnerships and support.
+
+</p>
+
+</div>
+
+
+<div class="contact-grid">
+
+
+<div class="contact-info">
+
+<h3>
+Smart Driver Network
+</h3>
+
+<p>
+Connecting Professional Drivers
+with Trusted Employers.
+</p>
+
+
+<div class="contact-detail">
+
+<strong>
+Phone
+</strong>
+
+<a href="tel:+255766669666">
+0766669666
+</a>
+
+<br>
+
+<a href="tel:+255715056883">
+0715056883
+</a>
+
+</div>
+
+
+<div class="contact-detail">
+
+<strong>
+Email
+</strong>
+
+<a href="mailto:sdn.ltd23@gmail.com">
+
+sdn.ltd23@gmail.com
+
+</a>
+
+</div>
+
+
+<div class="contact-detail">
+
+<strong>
+Verification Payment
+</strong>
+
+Vodacom M-Pesa
+
+<br>
+
+<strong>
+0766669666
+</strong>
+
+</div>
+
+
+<div class="contact-detail">
+
+<strong>
+Location
+</strong>
+
+Tanzania
+
+</div>
+
+</div>
+
+
+<div class="contact-form">
+
+<h3>
+Send Us a Message
+</h3>
+
+
+<form
+id="contactForm">
+
+
+<input
+type="text"
+id="contactName"
+placeholder="Full Name"
+required>
+
+
+<input
+type="email"
+id="contactEmail"
+placeholder="Email Address"
+required>
+
+
+<textarea
+id="contactMessage"
+placeholder="Your Message"
+required>
+</textarea>
+
+
+<button
+type="submit">
+
+Send Message
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+<div class="footer-grid">
+
+
+<div>
+
+<h3>
+Smart Driver Network
+</h3>
+
+<p>
+
+Connecting Professional Drivers
+with Trusted Employers.
+
+</p>
+
+<p
+style="
+margin-top:9px;
+">
+
+Driving Careers.
+Connecting Opportunities.
+
+</p>
+
+</div>
+
+
+<div>
+
+<h3>
+Platform
+</h3>
+
+<ul>
+
+<li>
+<a href="#drivers">
+For Drivers
+</a>
+</li>
+
+<li>
+<a href="#employers">
+For Employers
+</a>
+</li>
+
+<li>
+<a href="#registration">
+Driver Registration
+</a>
+</li>
+
+<li>
+<a href="#employer-request">
+Request Drivers
+</a>
+</li>
+
+</ul>
+
+</div>
+
+
+<div>
+
+<h3>
+Contact
+</h3>
+
+<ul>
+
+<li>
+0766669666
+</li>
+
+<li>
+0715056883
+</li>
+
+<li>
+sdn.ltd23@gmail.com
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+<div class="copyright">
+
+© 2026 Smart Driver Network (SDN).
+All Rights Reserved.
+
+</div>
+
+</footer>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
 
 <script>
 
-/*
-==================================================
-IMPORTANT SECURITY NOTE
-==================================================
+/* =========================================================
+   REGISTRATION STATE
+========================================================= */
 
-This demonstration login is NOT production security.
-
-Do NOT put a real administrator password inside
-client-side JavaScript.
-
-Before the SDN system goes live, authentication,
-database access, uploaded documents and payment
-verification must be handled by a secure backend.
-*/
+let paymentConfirmed = false;
 
 
-/* ==================================================
-   DEMO DATA
-================================================== */
+/* =========================================================
+   STEP NAVIGATION
+========================================================= */
 
-const drivers = [
+function nextStep(step){
 
-{
-    id:"SDN-TZ-00001",
-    name:"John Mwakalinga",
-    phone:"0712345678",
-    licence:"TZ123456",
-    vehicle:"Truck",
-    experience:"6 years",
-    payment:"Paid",
-    status:"Pending",
-    documents:"Complete"
-},
+    if(step === 2){
 
-{
-    id:"SDN-TZ-00002",
-    name:"Amani Joseph",
-    phone:"0755123456",
-    licence:"TZ987654",
-    vehicle:"Bus",
-    experience:"8 years",
-    payment:"Paid",
-    status:"Verified",
-    documents:"Complete"
-},
-
-{
-    id:"SDN-TZ-00003",
-    name:"Peter Daniel",
-    phone:"0766123456",
-    licence:"TZ654321",
-    vehicle:"Tanker / Fuel",
-    experience:"5 years",
-    payment:"Pending",
-    status:"Pending",
-    documents:"Incomplete"
-}
-
-];
-
-
-const employers = [
-
-{
-    name:"ABC Logistics Ltd",
-    contact:"James Joseph",
-    phone:"0711000000",
-    email:"info@abclogistics.co.tz",
-    location:"Dar es Salaam",
-    requests:1,
-    status:"Active"
-},
-
-{
-    name:"XYZ Mining Ltd",
-    contact:"Michael George",
-    phone:"0755000000",
-    email:"hr@xyzmining.co.tz",
-    location:"Geita",
-    requests:2,
-    status:"Active"
-},
-
-{
-    name:"Example Institution",
-    contact:"Sarah Peter",
-    phone:"0788000000",
-    email:"transport@example.org",
-    location:"Dodoma",
-    requests:1,
-    status:"Active"
-}
-
-];
-
-
-const requests = [
-
-{
-    organization:"ABC Logistics Ltd",
-    drivers:5,
-    vehicle:"Truck",
-    location:"Dar es Salaam",
-    experience:"3+ years",
-    licence:"Class C / E",
-    status:"Open"
-},
-
-{
-    organization:"XYZ Mining Ltd",
-    drivers:3,
-    vehicle:"Mining Truck",
-    location:"Geita",
-    experience:"5+ years",
-    licence:"Heavy Vehicle",
-    status:"Open"
-},
-
-{
-    organization:"Example Institution",
-    drivers:2,
-    vehicle:"SUV / Corporate",
-    location:"Dodoma",
-    experience:"3+ years",
-    licence:"Class B",
-    status:"Open"
-}
-
-];
-
-
-const payments = [
-
-{
-    transaction:"SDN-TXN-001",
-    driver:"Amani Joseph",
-    phone:"0755123456",
-    amount:10000,
-    method:"Vodacom M-Pesa",
-    status:"Paid",
-    date:"2026-08-12"
-}
-
-];
-
-
-/* ==================================================
-   LOGIN
-================================================== */
-
-function adminLogin(){
-
-    const email =
-        document
-        .getElementById("adminEmail")
-        .value
-        .trim();
-
-    const password =
-        document
-        .getElementById("adminPassword")
-        .value;
-
-
-    /*
-    DEMO ONLY
-
-    These credentials are temporary for UI testing.
-    They MUST be replaced by secure server-side
-    authentication before production.
-    */
-
-    if(
-        email === "admin@sdn.test" &&
-        password === "SDN-DEMO-2026"
-    ){
-
-        document
-        .getElementById("loginPage")
-        .style.display="none";
-
-        document
-        .getElementById("adminApp")
-        .style.display="block";
-
-        loadDashboard();
-
-    }else{
-
-        const message =
-            document
-            .getElementById("loginMessage");
-
-        message.style.display="block";
-
-        message.innerText =
-            "Demo login: admin@sdn.test / SDN-DEMO-2026";
-
-    }
-
-}
-
-
-/* ==================================================
-   LOGOUT
-================================================== */
-
-function logout(){
-
-    document
-    .getElementById("adminApp")
-    .style.display="none";
-
-    document
-    .getElementById("loginPage")
-    .style.display="flex";
-
-}
-
-
-/* ==================================================
-   NAVIGATION
-================================================== */
-
-function showPage(pageId,button){
-
-    document
-    .querySelectorAll(".page")
-    .forEach(function(page){
-
-        page.classList.remove("active");
-
-    });
-
-
-    const page =
-        document.getElementById(pageId);
-
-    if(page){
-
-        page.classList.add("active");
+        if(!validatePersonal()){
+            return;
+        }
 
     }
 
 
-    document
-    .querySelectorAll(".sidebar button")
-    .forEach(function(btn){
+    if(step === 3){
 
-        btn.classList.remove("active");
-
-    });
-
-
-    if(button){
-
-        button.classList.add("active");
+        if(!validateDriving()){
+            return;
+        }
 
     }
 
 
-    const titles = {
+    if(step === 4){
 
-        dashboard:"Dashboard",
+        if(!validateDocuments()){
+            return;
+        }
 
-        drivers:"Drivers",
-
-        verification:"Driver Verification",
-
-        documents:"Documents",
-
-        employers:"Employers / Organizations",
-
-        requests:"Driver Requests",
-
-        payments:"Payments",
-
-        settings:"Settings"
-
-    };
+    }
 
 
-    document
-    .getElementById("topTitle")
-    .innerText =
-        titles[pageId] || "SDN Admin";
+    if(step === 5){
 
-}
+        if(!paymentConfirmed){
 
+            alert(
+                "Payment must be confirmed before you continue."
+            );
 
-function showPageById(pageId){
-
-    const buttons =
-        document
-        .querySelectorAll(".sidebar button");
-
-    buttons.forEach(function(button){
-
-        if(
-            button
-            .getAttribute("onclick")
-            ?.includes("'" + pageId + "'")
-        ){
-
-            showPage(pageId,button);
+            return;
 
         }
 
+        createReview();
+
+    }
+
+
+    document
+    .querySelectorAll(".form-step")
+    .forEach(function(element){
+
+        element.classList.remove("active");
+
+    });
+
+
+    const target =
+        document.getElementById(
+            "step" + step
+        );
+
+
+    if(target){
+
+        target.classList.add("active");
+
+    }
+
+
+    updateProgress(step);
+
+
+    document
+    .getElementById("registration")
+    .scrollIntoView({
+        behavior:"smooth"
     });
 
 }
 
 
-/* ==================================================
-   DASHBOARD
-================================================== */
+/* =========================================================
+   PROGRESS
+========================================================= */
 
-function loadDashboard(){
+function updateProgress(step){
 
-    document
-    .getElementById("totalDrivers")
-    .innerText =
-        drivers.length;
+    for(
+        let i = 1;
+        i <= 5;
+        i++
+    ){
 
-
-    document
-    .getElementById("pendingDrivers")
-    .innerText =
-        drivers.filter(
-            d => d.status === "Pending"
-        ).length;
+        const item =
+            document.getElementById(
+                "progress" + i
+            );
 
 
-    document
-    .getElementById("verifiedDrivers")
-    .innerText =
-        drivers.filter(
-            d => d.status === "Verified"
-        ).length;
+        if(item){
 
+            item.classList.toggle(
+                "active",
+                i <= step
+            );
 
-    document
-    .getElementById("totalEmployers")
-    .innerText =
-        employers.length;
+        }
 
-
-    document
-    .getElementById("openRequests")
-    .innerText =
-        requests.filter(
-            r => r.status === "Open"
-        ).length;
-
-
-    renderDashboardDrivers();
-
-    renderDashboardRequests();
-
-    renderDrivers();
-
-    renderVerification();
-
-    renderDocuments();
-
-    renderEmployers();
-
-    renderRequests();
-
-    renderPayments();
+    }
 
 }
 
 
-/* ==================================================
-   DASHBOARD DRIVERS
-================================================== */
+/* =========================================================
+   PERSONAL VALIDATION
+========================================================= */
 
-function renderDashboardDrivers(){
+function validatePersonal(){
 
-    const table =
+    const name =
         document
-        .getElementById("dashboardDrivers");
-
-    table.innerHTML="";
-
-
-    drivers.slice(0,5).forEach(function(driver){
-
-        table.innerHTML += `
-
-        <tr>
-
-        <td>
-        <strong>${driver.name}</strong><br>
-        <small>${driver.id}</small>
-        </td>
-
-        <td>
-        ${driver.phone}
-        </td>
-
-        <td>
-        ${driver.vehicle}
-        </td>
-
-        <td>
-        <span class="status paid">
-        ${driver.payment}
-        </span>
-        </td>
-
-        <td>
-        <span class="status ${
-            driver.status === "Verified"
-            ? "verified"
-            : driver.status === "Rejected"
-            ? "rejected"
-            : "pending"
-        }">
-        ${driver.status}
-        </span>
-        </td>
-
-        <td>
-
-        <button
-        class="small-btn view-btn"
-        onclick="viewDriver('${driver.id}')">
-        View
-        </button>
-
-        </td>
-
-        </tr>
-
-        `;
-
-    });
-
-}
-
-
-/* ==================================================
-   ALL DRIVERS
-================================================== */
-
-function renderDrivers(list=drivers){
-
-    const table =
-        document
-        .getElementById("driversTable");
-
-    table.innerHTML="";
-
-
-    list.forEach(function(driver){
-
-        table.innerHTML += `
-
-        <tr>
-
-        <td>
-        <strong>${driver.id}</strong>
-        </td>
-
-        <td>
-        ${driver.name}
-        </td>
-
-        <td>
-        ${driver.phone}
-        </td>
-
-        <td>
-        ${driver.licence}
-        </td>
-
-        <td>
-        ${driver.vehicle}
-        </td>
-
-        <td>
-
-        <span class="status ${
-            driver.payment === "Paid"
-            ? "paid"
-            : "pending"
-        }">
-
-        ${driver.payment}
-
-        </span>
-
-        </td>
-
-        <td>
-
-        <span class="status ${
-            driver.status === "Verified"
-            ? "verified"
-            : driver.status === "Rejected"
-            ? "rejected"
-            : "pending"
-        }">
-
-        ${driver.status}
-
-        </span>
-
-        </td>
-
-        <td>
-
-        <button
-        class="small-btn view-btn"
-        onclick="viewDriver('${driver.id}')">
-
-        View
-
-        </button>
-
-        </td>
-
-        </tr>
-
-        `;
-
-    });
-
-}
-
-
-/* ==================================================
-   DRIVER SEARCH
-================================================== */
-
-function filterDrivers(){
-
-    const search =
-        document
-        .getElementById("driverSearch")
+        .getElementById("fullName")
         .value
-        .toLowerCase();
+        .trim();
+
+
+    const phone =
+        document
+        .getElementById("driverPhone")
+        .value
+        .trim();
+
+
+    const location =
+        document
+        .getElementById("driverLocation")
+        .value
+        .trim();
+
+
+    if(
+        !name ||
+        !phone ||
+        !location
+    ){
+
+        alert(
+            "Please complete Full Name, Phone Number and Location."
+        );
+
+        return false;
+
+    }
+
+
+    return true;
+
+}
+
+
+/* =========================================================
+   DRIVING VALIDATION
+========================================================= */
+
+function validateDriving(){
+
+    const licence =
+        document
+        .getElementById("licenceNumber")
+        .value
+        .trim();
+
+
+    const licenceClass =
+        document
+        .getElementById("licenceClass")
+        .value;
+
+
+    const experience =
+        document
+        .getElementById("experience")
+        .value;
+
+
+    const vehicle =
+        document
+        .getElementById("vehicleCategory")
+        .value;
+
+
+    if(
+        !licence ||
+        !licenceClass ||
+        !experience ||
+        !vehicle
+    ){
+
+        alert(
+            "Please complete all required driving information."
+        );
+
+        return false;
+
+    }
+
+
+    return true;
+
+}
+
+
+/* =========================================================
+   DOCUMENT VALIDATION
+========================================================= */
+
+function validateDocuments(){
+
+    const licence =
+        document
+        .getElementById("licenceFile")
+        .files
+        .length;
+
+
+    if(!licence){
+
+        alert(
+            "Please upload your Driving Licence."
+        );
+
+        return false;
+
+    }
+
+
+    return true;
+
+}
+
+
+/* =========================================================
+   PAYMENT
+========================================================= */
+
+function requestPayment(){
+
+    const phone =
+        document
+        .getElementById("driverPhone")
+        .value
+        .trim();
+
+
+    if(!phone){
+
+        alert(
+            "Please enter your phone number first."
+        );
+
+        nextStep(1);
+
+        return;
+
+    }
+
+
+    /*
+       IMPORTANT:
+
+       This website is currently on GitHub Pages.
+
+       GitHub Pages cannot securely verify
+       Vodacom M-Pesa transactions.
+
+       Therefore this function does NOT
+       falsely mark the driver as paid.
+
+       The official payment gateway/backend
+       will be connected here.
+    */
 
 
     const status =
         document
-        .getElementById("driverStatus")
+        .getElementById("paymentStatus");
+
+
+    status.innerHTML =
+
+        "Payment gateway connection is required " +
+        "before a real M-Pesa payment can be confirmed.";
+
+}
+
+
+/* =========================================================
+   REVIEW
+========================================================= */
+
+function createReview(){
+
+    const name =
+        document
+        .getElementById("fullName")
         .value;
 
 
-    const payment =
+    const phone =
         document
-        .getElementById("driverPayment")
+        .getElementById("driverPhone")
         .value;
 
 
-    const filtered =
-        drivers.filter(function(driver){
-
-            const text =
-                (
-                    driver.id +
-                    driver.name +
-                    driver.phone +
-                    driver.licence +
-                    driver.vehicle
-                )
-                .toLowerCase();
+    const location =
+        document
+        .getElementById("driverLocation")
+        .value;
 
 
-            return (
-
-                text.includes(search) &&
-
-                (!status ||
-                driver.status === status) &&
-
-                (!payment ||
-                driver.payment === payment)
-
-            );
-
-        });
+    const licence =
+        document
+        .getElementById("licenceNumber")
+        .value;
 
 
-    renderDrivers(filtered);
+    const vehicle =
+        document
+        .getElementById("vehicleCategory")
+        .value;
+
+
+    const experience =
+        document
+        .getElementById("experience")
+        .value;
+
+
+    document
+    .getElementById("reviewBox")
+    .innerHTML =
+
+    "<strong>Driver Name:</strong> " +
+    escapeHTML(name) +
+
+    "<br><br>" +
+
+    "<strong>Phone:</strong> " +
+    escapeHTML(phone) +
+
+    "<br><br>" +
+
+    "<strong>Location:</strong> " +
+    escapeHTML(location) +
+
+    "<br><br>" +
+
+    "<strong>Licence:</strong> " +
+    escapeHTML(licence) +
+
+    "<br><br>" +
+
+    "<strong>Vehicle:</strong> " +
+    escapeHTML(vehicle) +
+
+    "<br><br>" +
+
+    "<strong>Experience:</strong> " +
+    escapeHTML(experience) +
+
+    "<br><br>" +
+
+    "<strong>Verification Fee:</strong> TZS 10,000";
 
 }
 
 
-/* ==================================================
-   VERIFICATION
-================================================== */
+/* =========================================================
+   SUBMIT DRIVER
+========================================================= */
 
-function renderVerification(){
+function submitDriver(){
 
-    const table =
-        document
-        .getElementById("verificationTable");
+    if(!paymentConfirmed){
 
-    table.innerHTML="";
+        alert(
+            "Payment must be confirmed before submission."
+        );
 
+        return;
 
-    drivers
-    .filter(
-        d => d.status === "Pending"
-    )
-    .forEach(function(driver){
+    }
 
-        table.innerHTML += `
 
-        <tr>
+    const application =
+        "SDN-TZ-" +
+        Date.now()
+        .toString()
+        .slice(-8);
 
-        <td>
-        ${driver.id}
-        </td>
 
-        <td>
-        ${driver.name}
-        </td>
+    document
+    .querySelectorAll(".form-step")
+    .forEach(function(element){
 
-        <td>
-        ${driver.vehicle}
-        </td>
-
-        <td>
-        ${driver.experience}
-        </td>
-
-        <td>
-
-        <span class="status ${
-            driver.payment === "Paid"
-            ? "paid"
-            : "pending"
-        }">
-
-        ${driver.payment}
-
-        </span>
-
-        </td>
-
-        <td>
-        ${driver.documents}
-        </td>
-
-        <td>
-
-        <button
-        class="small-btn verify-btn"
-        onclick="verifyDriver('${driver.id}')">
-
-        Verify
-
-        </button>
-
-        <button
-        class="small-btn reject-btn"
-        onclick="rejectDriver('${driver.id}')">
-
-        Reject
-
-        </button>
-
-        </td>
-
-        </tr>
-
-        `;
-
-    });
-
-}
-
-
-/* ==================================================
-   DOCUMENTS
-================================================== */
-
-function renderDocuments(){
-
-    const table =
-        document
-        .getElementById("documentsTable");
-
-    table.innerHTML="";
-
-
-    drivers.forEach(function(driver){
-
-        table.innerHTML += `
-
-        <tr>
-
-        <td>
-        ${driver.id}
-        </td>
-
-        <td>
-        ${driver.name}
-        </td>
-
-        <td>
-        ✓ Uploaded
-        </td>
-
-        <td>
-        ✓ Uploaded
-        </td>
-
-        <td>
-        ✓ Uploaded
-        </td>
-
-        <td>
-
-        <span class="status ${
-            driver.documents === "Complete"
-            ? "paid"
-            : "pending"
-        }">
-
-        ${driver.documents}
-
-        </span>
-
-        </td>
-
-        <td>
-
-        <button
-        class="small-btn view-btn"
-        onclick="viewDriver('${driver.id}')">
-
-        Review
-
-        </button>
-
-        </td>
-
-        </tr>
-
-        `;
-
-    });
-
-}
-
-
-/* ==================================================
-   EMPLOYERS
-================================================== */
-
-function renderEmployers(){
-
-    const table =
-        document
-        .getElementById("employersTable");
-
-    table.innerHTML="";
-
-
-    employers.forEach(function(employer){
-
-        table.innerHTML += `
-
-        <tr>
-
-        <td>
-        <strong>
-        ${employer.name}
-        </strong>
-        </td>
-
-        <td>
-        ${employer.contact}
-        </td>
-
-        <td>
-        ${employer.phone}
-        </td>
-
-        <td>
-        ${employer.email}
-        </td>
-
-        <td>
-        ${employer.location}
-        </td>
-
-        <td>
-        ${employer.requests}
-        </td>
-
-        <td>
-
-        <span class="status open">
-        ${employer.status}
-        </span>
-
-        </td>
-
-        </tr>
-
-        `;
-
-    });
-
-}
-
-
-/* ==================================================
-   REQUESTS
-================================================== */
-
-function renderRequests(){
-
-    const grid =
-        document
-        .getElementById("requestGrid");
-
-    grid.innerHTML="";
-
-
-    requests.forEach(function(request){
-
-        grid.innerHTML += `
-
-        <div class="request-card">
-
-        <h3>
-        ${request.organization}
-        </h3>
-
-        <p>
-        <strong>Drivers Needed:</strong>
-        ${request.drivers}
-        </p>
-
-        <p>
-        <strong>Vehicle:</strong>
-        ${request.vehicle}
-        </p>
-
-        <p>
-        <strong>Location:</strong>
-        ${request.location}
-        </p>
-
-        <p>
-        <strong>Experience:</strong>
-        ${request.experience}
-        </p>
-
-        <p>
-        <strong>Licence:</strong>
-        ${request.licence}
-        </p>
-
-        <div class="request-footer">
-
-        <span class="status open">
-        ${request.status}
-        </span>
-
-        <button
-        class="small-btn view-btn"
-        onclick="matchDrivers('${request.organization}')">
-
-        Match Drivers
-
-        </button>
-
-        </div>
-
-        </div>
-
-        `;
-
-    });
-
-}
-
-
-/* ==================================================
-   PAYMENTS
-================================================== */
-
-function renderPayments(){
-
-    const table =
-        document
-        .getElementById("paymentsTable");
-
-    table.innerHTML="";
-
-
-    let total = 0;
-
-
-    payments.forEach(function(payment){
-
-        total += payment.amount;
-
-
-        table.innerHTML += `
-
-        <tr>
-
-        <td>
-        ${payment.transaction}
-        </td>
-
-        <td>
-        ${payment.driver}
-        </td>
-
-        <td>
-        ${payment.phone}
-        </td>
-
-        <td>
-        TZS ${payment.amount.toLocaleString()}
-        </td>
-
-        <td>
-        ${payment.method}
-        </td>
-
-        <td>
-
-        <span class="status paid">
-        ${payment.status}
-        </span>
-
-        </td>
-
-        <td>
-        ${payment.date}
-        </td>
-
-        </tr>
-
-        `;
+        element.classList.remove("active");
 
     });
 
 
     document
-    .getElementById("totalPaid")
-    .innerText =
-        payments.length;
+    .getElementById("successStep")
+    .classList.add("active");
 
 
     document
-    .getElementById("totalRevenue")
+    .getElementById("applicationNumber")
     .innerText =
-        "TZS " + total.toLocaleString();
+        application;
+
+
+    updateProgress(5);
+
+
+    document
+    .getElementById("registration")
+    .scrollIntoView({
+        behavior:"smooth"
+    });
 
 }
 
 
-/* ==================================================
-   VERIFY DRIVER
-================================================== */
+/* =========================================================
+   SEARCH
+========================================================= */
 
-function verifyDriver(id){
+function searchDrivers(){
 
-    const driver =
-        drivers.find(
-            d => d.id === id
-        );
-
-
-    if(!driver){
-        return;
-    }
+    const vehicle =
+        document
+        .getElementById("searchVehicle")
+        .value;
 
 
-    if(driver.payment !== "Paid"){
+    const location =
+        document
+        .getElementById("searchLocation")
+        .value;
+
+
+    if(!vehicle && !location){
 
         alert(
-            "This driver has not completed payment."
-        );
-
-        return;
-
-    }
-
-
-    const confirmation =
-        confirm(
-            "Verify " +
-            driver.name +
-            " as an SDN Driver?"
-        );
-
-
-    if(confirmation){
-
-        driver.status =
-            "Verified";
-
-
-        showNotification(
-            driver.name +
-            " has been verified."
-        );
-
-
-        loadDashboard();
-
-    }
-
-}
-
-
-/* ==================================================
-   REJECT DRIVER
-================================================== */
-
-function rejectDriver(id){
-
-    const driver =
-        drivers.find(
-            d => d.id === id
-        );
-
-
-    if(!driver){
-        return;
-    }
-
-
-    const confirmation =
-        confirm(
-            "Reject this application?"
-        );
-
-
-    if(confirmation){
-
-        driver.status =
-            "Rejected";
-
-
-        showNotification(
-            driver.name +
-            " application rejected."
-        );
-
-
-        loadDashboard();
-
-    }
-
-}
-
-
-/* ==================================================
-   VIEW DRIVER
-================================================== */
-
-function viewDriver(id){
-
-    const driver =
-        drivers.find(
-            d => d.id === id
-        );
-
-
-    if(!driver){
-        return;
-    }
-
-
-    alert(
-
-        "SDN DRIVER PROFILE\n\n" +
-
-        "Driver ID: " +
-        driver.id +
-
-        "\n\nName: " +
-        driver.name +
-
-        "\nPhone: " +
-        driver.phone +
-
-        "\nLicence: " +
-        driver.licence +
-
-        "\nVehicle: " +
-        driver.vehicle +
-
-        "\nExperience: " +
-        driver.experience +
-
-        "\nPayment: " +
-        driver.payment +
-
-        "\nVerification: " +
-        driver.status +
-
-        "\nDocuments: " +
-        driver.documents
-
-    );
-
-}
-
-
-/* ==================================================
-   MATCH DRIVERS
-================================================== */
-
-function matchDrivers(organization){
-
-    const verified =
-        drivers.filter(
-            d => d.status === "Verified"
-        );
-
-
-    if(verified.length === 0){
-
-        alert(
-            "No verified drivers are currently available."
+            "Please select a vehicle or location."
         );
 
         return;
@@ -2883,61 +3907,281 @@ function matchDrivers(organization){
 
     alert(
 
-        organization +
-        "\n\nAvailable verified drivers:\n\n" +
+        "SDN Driver Search\n\n" +
 
-        verified
-        .map(
-            d =>
-            d.id +
-            " - " +
-            d.name +
-            " - " +
-            d.vehicle
-        )
-        .join("\n")
+        "Vehicle: " +
+        (vehicle || "Any") +
+
+        "\nLocation: " +
+        (location || "Any") +
+
+        "\n\n" +
+
+        "The live verified-driver database " +
+        "will be connected to the SDN backend."
 
     );
 
 }
 
 
-/* ==================================================
-   NOTIFICATION
-================================================== */
+/* =========================================================
+   EMPLOYER REQUEST
+========================================================= */
 
-function showNotification(message){
+document
+.getElementById("employerForm")
+.addEventListener(
+"submit",
+function(event){
 
-    const notification =
+    event.preventDefault();
+
+
+    const organization =
         document
-        .getElementById("notification");
+        .getElementById("organizationName")
+        .value
+        .trim();
 
 
-    notification.innerText =
-        message;
+    const contact =
+        document
+        .getElementById("contactPerson")
+        .value
+        .trim();
 
 
-    notification.style.display =
-        "block";
+    const phone =
+        document
+        .getElementById("employerPhone")
+        .value
+        .trim();
 
 
-    setTimeout(function(){
+    const email =
+        document
+        .getElementById("employerEmail")
+        .value
+        .trim();
 
-        notification.style.display =
-            "none";
 
-    },3000);
+    const location =
+        document
+        .getElementById("employerLocation")
+        .value
+        .trim();
+
+
+    const drivers =
+        document
+        .getElementById("driversNeeded")
+        .value;
+
+
+    const vehicle =
+        document
+        .getElementById("employerVehicle")
+        .value;
+
+
+    const experience =
+        document
+        .getElementById("requiredExperience")
+        .value;
+
+
+    const licence =
+        document
+        .getElementById("requiredLicence")
+        .value
+        .trim();
+
+
+    const deadline =
+        document
+        .getElementById("deadline")
+        .value;
+
+
+    const description =
+        document
+        .getElementById("jobDescription")
+        .value
+        .trim();
+
+
+    if(
+        !organization ||
+        !contact ||
+        !phone ||
+        !email ||
+        !location ||
+        !drivers ||
+        !vehicle
+    ){
+
+        alert(
+            "Please complete all required employer information."
+        );
+
+        return;
+
+    }
+
+
+    const subject =
+        encodeURIComponent(
+            "SDN Driver Request - " +
+            organization
+        );
+
+
+    const body =
+        encodeURIComponent(
+
+            "SMART DRIVER NETWORK - DRIVER REQUEST\n\n" +
+
+            "Organization: " +
+            organization +
+
+            "\nContact Person: " +
+            contact +
+
+            "\nPhone: " +
+            phone +
+
+            "\nEmail: " +
+            email +
+
+            "\nLocation: " +
+            location +
+
+            "\nDrivers Needed: " +
+            drivers +
+
+            "\nVehicle: " +
+            vehicle +
+
+            "\nExperience: " +
+            experience +
+
+            "\nLicence Requirement: " +
+            licence +
+
+            "\nDeadline: " +
+            deadline +
+
+            "\n\nJob Description:\n" +
+            description
+
+        );
+
+
+    window.location.href =
+        "mailto:sdn.ltd23@gmail.com" +
+
+        "?subject=" +
+        subject +
+
+        "&body=" +
+        body;
+
+});
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+document
+.getElementById("contactForm")
+.addEventListener(
+"submit",
+function(event){
+
+    event.preventDefault();
+
+
+    const name =
+        document
+        .getElementById("contactName")
+        .value
+        .trim();
+
+
+    const email =
+        document
+        .getElementById("contactEmail")
+        .value
+        .trim();
+
+
+    const message =
+        document
+        .getElementById("contactMessage")
+        .value
+        .trim();
+
+
+    const subject =
+        encodeURIComponent(
+            "SDN Website Enquiry"
+        );
+
+
+    const body =
+        encodeURIComponent(
+
+            "Hello Smart Driver Network,\n\n" +
+
+            "Name: " +
+            name +
+
+            "\nEmail: " +
+            email +
+
+            "\n\nMessage:\n" +
+
+            message
+
+        );
+
+
+    window.location.href =
+        "mailto:sdn.ltd23@gmail.com" +
+
+        "?subject=" +
+        subject +
+
+        "&body=" +
+        body;
+
+});
+
+
+/* =========================================================
+   ESCAPE HTML
+========================================================= */
+
+function escapeHTML(text){
+
+    return text
+
+    .replace(/&/g,"&amp;")
+
+    .replace(/</g,"&lt;")
+
+    .replace(/>/g,"&gt;")
+
+    .replace(/"/g,"&quot;")
+
+    .replace(/'/g,"&#039;");
 
 }
-
-
-/* ==================================================
-   START
-================================================== */
-
-loadDashboard();
 
 </script>
+
 
 </body>
 </html>
