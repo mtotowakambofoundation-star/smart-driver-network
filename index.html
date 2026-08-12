@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Smart Driver Network (SDN) | Connecting Professional Drivers with Trusted Employers - Tanzania</title>
+<title>Smart Driver Network (SDN) | Connecting Professional Drivers with Trusted Employers</title>
 
 <meta name="description" content="Smart Driver Network connects professional drivers with trusted employers across Tanzania and Africa.">
 
@@ -20,19 +20,32 @@ html{
 }
 
 body{
-    font-family:Arial,Helvetica,sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
     color:#172033;
-    background:#fff;
+    background:#ffffff;
     line-height:1.6;
 }
 
-/* HEADER */
+a{
+    text-decoration:none;
+}
+
+button,
+input,
+select,
+textarea{
+    font-family:inherit;
+}
+
+/* =========================
+   HEADER
+========================= */
 
 header{
     position:sticky;
     top:0;
     z-index:1000;
-    background:#fff;
+    background:#ffffff;
     box-shadow:0 2px 15px rgba(0,0,0,.08);
 }
 
@@ -55,36 +68,38 @@ header{
     width:52px;
     height:52px;
     border-radius:12px;
-    background:#0b5cab;
-    color:#fff;
+    background:linear-gradient(135deg,#0b5cab,#0879d1);
+    color:white;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:20px;
-    font-weight:800;
+    font-size:17px;
+    font-weight:900;
+    letter-spacing:-1px;
+    box-shadow:0 5px 15px rgba(11,92,171,.25);
 }
 
 .logo-text h1{
-    font-size:20px;
+    font-size:19px;
     color:#0b5cab;
-    line-height:1.1;
+    line-height:1.15;
 }
 
 .logo-text span{
-    font-size:11px;
+    font-size:10px;
     color:#64748b;
-    font-weight:600;
+    font-weight:700;
+    letter-spacing:.5px;
 }
 
 nav ul{
     list-style:none;
     display:flex;
     align-items:center;
-    gap:25px;
+    gap:22px;
 }
 
 nav a{
-    text-decoration:none;
     color:#172033;
     font-size:14px;
     font-weight:600;
@@ -96,24 +111,38 @@ nav a:hover{
 
 .nav-button{
     background:#0b5cab;
-    color:#fff!important;
-    padding:11px 19px;
+    color:#ffffff !important;
+    padding:11px 18px;
     border-radius:7px;
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero{
-    min-height:680px;
+    min-height:650px;
     background:
-    linear-gradient(
-        rgba(5,25,50,.82),
-        rgba(5,25,50,.82)
-    ),
-    url("hero-driver.jpg") center/cover no-repeat;
-
+        linear-gradient(
+            105deg,
+            rgba(4,25,48,.96),
+            rgba(8,62,105,.82)
+        );
     display:flex;
     align-items:center;
+    position:relative;
+    overflow:hidden;
+}
+
+.hero:after{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    border:70px solid rgba(57,167,255,.08);
+    right:-180px;
+    top:-100px;
 }
 
 .hero-container{
@@ -121,26 +150,30 @@ nav a:hover{
     width:100%;
     margin:auto;
     padding:90px 25px;
+    position:relative;
+    z-index:2;
 }
 
 .hero-content{
-    max-width:760px;
-    color:#fff;
+    max-width:780px;
+    color:#ffffff;
 }
 
 .hero-badge{
     display:inline-block;
-    padding:8px 15px;
-    border:1px solid rgba(255,255,255,.35);
+    padding:8px 16px;
+    border:1px solid rgba(255,255,255,.3);
     border-radius:30px;
-    margin-bottom:20px;
-    font-size:13px;
+    font-size:12px;
+    font-weight:700;
+    margin-bottom:22px;
 }
 
 .hero h2{
     font-size:58px;
     line-height:1.08;
-    margin-bottom:20px;
+    margin-bottom:22px;
+    letter-spacing:-1.5px;
 }
 
 .hero h2 span{
@@ -148,57 +181,71 @@ nav a:hover{
 }
 
 .hero p{
-    font-size:19px;
-    max-width:680px;
-    color:#e5edf5;
+    font-size:18px;
+    max-width:700px;
+    color:#dce8f4;
     margin-bottom:30px;
 }
 
 .hero-buttons{
     display:flex;
-    gap:15px;
+    gap:14px;
     flex-wrap:wrap;
 }
 
 .btn{
     display:inline-block;
-    padding:14px 25px;
+    padding:14px 24px;
     border-radius:7px;
-    text-decoration:none;
     font-weight:700;
-    transition:.3s;
+    transition:.25s;
+    cursor:pointer;
+    border:none;
 }
 
 .btn-primary{
     background:#0b75d1;
-    color:#fff;
+    color:#ffffff;
 }
 
 .btn-primary:hover{
     background:#07599f;
+    transform:translateY(-1px);
 }
 
 .btn-outline{
-    border:1px solid #fff;
-    color:#fff;
+    border:1px solid rgba(255,255,255,.7);
+    color:#ffffff;
+    background:transparent;
 }
 
 .btn-outline:hover{
-    background:#fff;
+    background:#ffffff;
     color:#172033;
 }
 
-/* SEARCH */
+.btn-light{
+    background:#ffffff;
+    color:#0b5cab;
+}
+
+.btn-light:hover{
+    transform:translateY(-1px);
+}
+
+/* =========================
+   SEARCH
+========================= */
 
 .search-box{
-    max-width:1050px;
+    max-width:1080px;
     margin:-55px auto 0;
     position:relative;
     z-index:10;
-    background:#fff;
-    border-radius:12px;
-    padding:25px;
-    box-shadow:0 10px 35px rgba(0,0,0,.12);
+    background:#ffffff;
+    border-radius:13px;
+    padding:26px;
+    box-shadow:0 12px 40px rgba(0,0,0,.12);
 }
 
 .search-title{
@@ -206,7 +253,6 @@ nav a:hover{
 }
 
 .search-title h3{
-    color:#172033;
     font-size:22px;
 }
 
@@ -225,23 +271,30 @@ nav a:hover{
 .search-grid select{
     width:100%;
     padding:13px;
-    border:1px solid #dce2e8;
-    border-radius:6px;
+    border:1px solid #d8e0e8;
+    border-radius:7px;
     outline:none;
     background:#fff;
 }
 
+.search-grid input:focus,
+.search-grid select:focus{
+    border-color:#0b75d1;
+}
+
 .search-grid button{
-    border:none;
     background:#0b5cab;
     color:#fff;
-    padding:13px 22px;
-    border-radius:6px;
+    border:0;
+    border-radius:7px;
+    padding:13px 23px;
     font-weight:700;
     cursor:pointer;
 }
 
-/* GENERAL */
+/* =========================
+   GENERAL
+========================= */
 
 section{
     padding:90px 25px;
@@ -253,14 +306,14 @@ section{
 }
 
 .section-heading{
+    max-width:760px;
     text-align:center;
-    max-width:750px;
     margin:0 auto 50px;
 }
 
 .section-heading h2{
     font-size:38px;
-    color:#172033;
+    line-height:1.2;
     margin-bottom:12px;
 }
 
@@ -268,7 +321,9 @@ section{
     color:#64748b;
 }
 
-/* TWO SIDES */
+/* =========================
+   DRIVER / EMPLOYER
+========================= */
 
 .two-sides{
     background:#f7f9fc;
@@ -277,14 +332,14 @@ section{
 .side-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:30px;
+    gap:28px;
 }
 
 .side-card{
-    background:#fff;
-    padding:40px;
+    background:#ffffff;
+    padding:38px;
     border-radius:12px;
-    border:1px solid #e5eaf0;
+    border:1px solid #e3e8ee;
     box-shadow:0 5px 20px rgba(0,0,0,.05);
 }
 
@@ -316,19 +371,21 @@ section{
     color:#344054;
 }
 
-.side-card li::before{
+.side-card li:before{
     content:"✓";
     color:#0b75d1;
-    font-weight:bold;
+    font-weight:900;
     margin-right:9px;
 }
 
-/* HOW IT WORKS */
+/* =========================
+   HOW IT WORKS
+========================= */
 
 .steps{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    gap:20px;
+    gap:18px;
 }
 
 .step{
@@ -337,17 +394,16 @@ section{
 }
 
 .step-number{
-    width:55px;
-    height:55px;
+    width:56px;
+    height:56px;
     margin:0 auto 18px;
     border-radius:50%;
     background:#0b5cab;
-    color:#fff;
+    color:#ffffff;
     display:flex;
     align-items:center;
     justify-content:center;
     font-weight:800;
-    font-size:19px;
 }
 
 .step h3{
@@ -359,7 +415,9 @@ section{
     font-size:14px;
 }
 
-/* CATEGORIES */
+/* =========================
+   CATEGORIES
+========================= */
 
 .categories{
     background:#f7f9fc;
@@ -372,14 +430,26 @@ section{
 }
 
 .category{
-    background:#fff;
+    background:#ffffff;
     padding:28px;
     border-radius:10px;
-    border:1px solid #e5eaf0;
+    border:1px solid #e2e8f0;
+}
+
+.category-icon{
+    width:45px;
+    height:45px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:8px;
+    background:#eaf4fd;
+    color:#0b5cab;
+    font-size:20px;
+    margin-bottom:15px;
 }
 
 .category h3{
-    color:#172033;
     margin-bottom:8px;
 }
 
@@ -388,11 +458,13 @@ section{
     font-size:14px;
 }
 
-/* VERIFICATION */
+/* =========================
+   TRUST
+========================= */
 
 .verification{
     background:#172033;
-    color:#fff;
+    color:#ffffff;
 }
 
 .verification-grid{
@@ -404,11 +476,12 @@ section{
 
 .verification h2{
     font-size:38px;
+    line-height:1.2;
     margin-bottom:18px;
 }
 
 .verification p{
-    color:#d6deea;
+    color:#d2dce8;
     margin-bottom:20px;
 }
 
@@ -418,29 +491,32 @@ section{
 
 .verification-list li{
     padding:13px 0;
-    border-bottom:1px solid rgba(255,255,255,.12);
+    border-bottom:1px solid rgba(255,255,255,.1);
 }
 
-.verification-list li::before{
+.verification-list li:before{
     content:"✓";
     color:#39a7ff;
+    font-weight:900;
     margin-right:10px;
-    font-weight:bold;
 }
 
 .verification-box{
-    background:rgba(255,255,255,.08);
-    border:1px solid rgba(255,255,255,.15);
+    background:rgba(255,255,255,.07);
+    border:1px solid rgba(255,255,255,.14);
     padding:35px;
     border-radius:12px;
 }
 
 .verification-box h3{
     color:#39a7ff;
-    margin-bottom:15px;
+    font-size:24px;
+    margin-bottom:12px;
 }
 
-/* COUNTRIES */
+/* =========================
+   COUNTRIES
+========================= */
 
 .countries{
     text-align:center;
@@ -454,31 +530,27 @@ section{
 }
 
 .country{
-    padding:12px 22px;
-    border:1px solid #dce2e8;
+    padding:11px 22px;
+    border:1px solid #d9e0e7;
     border-radius:30px;
-    font-weight:600;
     color:#344054;
+    font-weight:600;
 }
 
 .country.active{
     background:#0b5cab;
-    color:#fff;
     border-color:#0b5cab;
+    color:#ffffff;
 }
 
-/* CTA */
+/* =========================
+   CTA
+========================= */
 
 .cta{
-    background:
-    linear-gradient(
-        rgba(11,92,171,.92),
-        rgba(11,92,171,.92)
-    ),
-    url("truck-road.jpg") center/cover no-repeat;
-
+    background:linear-gradient(135deg,#07599f,#0b75d1);
     text-align:center;
-    color:#fff;
+    color:#ffffff;
 }
 
 .cta h2{
@@ -489,10 +561,12 @@ section{
 .cta p{
     max-width:700px;
     margin:0 auto 25px;
-    color:#e9f2fb;
+    color:#e5f1fc;
 }
 
-/* CONTACT */
+/* =========================
+   CONTACT
+========================= */
 
 .contact{
     background:#f7f9fc;
@@ -509,16 +583,46 @@ section{
     margin-bottom:15px;
 }
 
-.contact-info p{
+.contact-info > p{
     color:#64748b;
+    margin-bottom:16px;
+}
+
+.contact-detail{
+    background:#ffffff;
+    border:1px solid #e1e7ed;
+    padding:17px;
+    border-radius:8px;
     margin-bottom:12px;
 }
 
+.contact-detail strong{
+    display:block;
+    color:#172033;
+    margin-bottom:4px;
+}
+
+.contact-detail a{
+    color:#0b5cab;
+    font-weight:600;
+}
+
+.contact-actions{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
+
 .contact-form{
-    background:#fff;
+    background:#ffffff;
     padding:30px;
-    border-radius:10px;
-    box-shadow:0 5px 20px rgba(0,0,0,.06);
+    border-radius:11px;
+    box-shadow:0 5px 22px rgba(0,0,0,.06);
+}
+
+.contact-form h3{
+    margin-bottom:18px;
 }
 
 .contact-form input,
@@ -526,10 +630,10 @@ section{
 .contact-form select{
     width:100%;
     padding:13px;
-    border:1px solid #dce2e8;
-    border-radius:6px;
-    margin-bottom:15px;
-    font-family:inherit;
+    border:1px solid #d8e0e8;
+    border-radius:7px;
+    margin-bottom:14px;
+    outline:none;
 }
 
 .contact-form textarea{
@@ -537,21 +641,36 @@ section{
     resize:vertical;
 }
 
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus{
+    border-color:#0b75d1;
+}
+
 .contact-form button{
-    border:none;
+    width:100%;
+    padding:14px;
+    border:0;
+    border-radius:7px;
     background:#0b5cab;
-    color:#fff;
-    padding:13px 25px;
-    border-radius:6px;
+    color:#ffffff;
     font-weight:700;
     cursor:pointer;
 }
 
-/* FOOTER */
+.contact-note{
+    font-size:12px;
+    color:#64748b;
+    margin-top:10px;
+}
+
+/* =========================
+   FOOTER
+========================= */
 
 footer{
     background:#0d1726;
-    color:#fff;
+    color:#ffffff;
     padding:50px 25px 20px;
 }
 
@@ -582,8 +701,13 @@ footer li{
     margin-bottom:8px;
 }
 
-footer a{
-    text-decoration:none;
+footer a:hover{
+    color:#ffffff;
+}
+
+.footer-contact a{
+    display:block;
+    margin-bottom:7px;
 }
 
 .copyright{
@@ -596,7 +720,9 @@ footer a{
     font-size:13px;
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:900px){
 
@@ -624,6 +750,10 @@ footer a{
     nav ul{
         display:none;
     }
+
+    .hero h2{
+        font-size:46px;
+    }
 }
 
 @media(max-width:600px){
@@ -633,7 +763,7 @@ footer a{
     }
 
     .hero{
-        min-height:620px;
+        min-height:600px;
     }
 
     .hero-container{
@@ -641,7 +771,7 @@ footer a{
     }
 
     .hero h2{
-        font-size:39px;
+        font-size:38px;
     }
 
     .hero p{
@@ -671,10 +801,6 @@ footer a{
         grid-template-columns:1fr;
     }
 
-    .logo-text h1{
-        font-size:17px;
-    }
-
     .hero-buttons{
         flex-direction:column;
     }
@@ -682,64 +808,58 @@ footer a{
     .btn{
         text-align:center;
     }
+
+    .logo-text h1{
+        font-size:16px;
+    }
+
+    .logo-mark{
+        width:46px;
+        height:46px;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
 <div class="navbar">
 
-    <div class="logo">
+    <a href="#home" class="logo">
 
         <div class="logo-mark">
             SDN
         </div>
 
         <div class="logo-text">
-
-            <h1>
-                Smart Driver Network
-            </h1>
-
-            <span>
-                CONNECTING DRIVERS & EMPLOYERS
-            </span>
-
+            <h1>Smart Driver Network</h1>
+            <span>CONNECTING DRIVERS & EMPLOYERS</span>
         </div>
 
-    </div>
+    </a>
 
     <nav>
 
         <ul>
 
-            <li>
-                <a href="#home">Home</a>
-            </li>
+            <li><a href="#home">Home</a></li>
+
+            <li><a href="#how">How It Works</a></li>
+
+            <li><a href="#drivers">For Drivers</a></li>
+
+            <li><a href="#employers">For Employers</a></li>
+
+            <li><a href="#contact">Contact</a></li>
 
             <li>
-                <a href="#how">How It Works</a>
-            </li>
-
-            <li>
-                <a href="#drivers">For Drivers</a>
-            </li>
-
-            <li>
-                <a href="#employers">For Employers</a>
-            </li>
-
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
-
-            <li>
-                <a href="#register" class="nav-button">
+                <a href="#contact" class="nav-button">
                     Register
                 </a>
             </li>
@@ -753,7 +873,9 @@ footer a{
 </header>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero" id="home">
 
@@ -762,7 +884,7 @@ footer a{
 <div class="hero-content">
 
     <div class="hero-badge">
-        Tanzania's Professional Driver Network
+        TANZANIA'S PROFESSIONAL DRIVER NETWORK
     </div>
 
     <h2>
@@ -775,7 +897,7 @@ footer a{
         Smart Driver Network (SDN) is a digital platform
         designed to connect qualified professional drivers
         with employers looking for the right driver for
-        the right vehicle and job.
+        the right vehicle and opportunity.
     </p>
 
     <div class="hero-buttons">
@@ -797,19 +919,18 @@ footer a{
 </section>
 
 
-<!-- SEARCH -->
+<!-- =========================
+     SEARCH
+========================= -->
 
 <div class="search-box">
 
 <div class="search-title">
 
-    <h3>
-        Find the Right Driver
-    </h3>
+    <h3>Find the Right Driver</h3>
 
     <p>
-        Search according to vehicle category,
-        experience and location.
+        Search by driver category, vehicle and location.
     </p>
 
 </div>
@@ -818,47 +939,35 @@ footer a{
 
     <input
         type="text"
+        id="driverSearch"
         placeholder="Driver category"
     >
 
-    <select>
+    <select id="vehicleSearch">
 
-        <option>
-            Select Vehicle
-        </option>
+        <option value="">Select Vehicle</option>
 
-        <option>
-            Truck
-        </option>
+        <option>Truck</option>
 
-        <option>
-            Bus
-        </option>
+        <option>Bus</option>
 
-        <option>
-            Tanker / Fuel
-        </option>
+        <option>Tanker / Fuel</option>
 
-        <option>
-            Mining Vehicle
-        </option>
+        <option>Mining Vehicle</option>
 
-        <option>
-            Construction Vehicle
-        </option>
+        <option>Construction Vehicle</option>
 
-        <option>
-            Personal / Corporate
-        </option>
+        <option>Personal / Corporate</option>
 
     </select>
 
     <input
         type="text"
+        id="locationSearch"
         placeholder="Location"
     >
 
-    <button>
+    <button type="button" onclick="searchDrivers()">
         Search
     </button>
 
@@ -867,17 +976,17 @@ footer a{
 </div>
 
 
-<!-- TWO SIDES -->
+<!-- =========================
+     TWO SIDES
+========================= -->
 
-<section class="two-sides" id="register">
+<section class="two-sides">
 
 <div class="container">
 
 <div class="section-heading">
 
-    <h2>
-        One Network. Two Opportunities.
-    </h2>
+    <h2>One Network. Two Opportunities.</h2>
 
     <p>
         Whether you are a professional driver looking
@@ -892,9 +1001,7 @@ footer a{
 
     <div class="side-card driver" id="drivers">
 
-        <h3>
-            For Professional Drivers
-        </h3>
+        <h3>For Professional Drivers</h3>
 
         <p>
             Build your professional profile and become
@@ -904,10 +1011,14 @@ footer a{
 
         <ul>
 
-            <li>Create your driver profile</li>
+            <li>Create your professional profile</li>
+
             <li>Add licences and qualifications</li>
+
             <li>Add driving experience</li>
+
             <li>Select vehicle categories</li>
+
             <li>Discover employment opportunities</li>
 
         </ul>
@@ -921,22 +1032,24 @@ footer a{
 
     <div class="side-card employer" id="employers">
 
-        <h3>
-            For Employers
-        </h3>
+        <h3>For Employers</h3>
 
         <p>
             Find professional drivers according to
-            the vehicle, experience and qualifications
+            vehicle type, experience and qualifications
             required for your operation.
         </p>
 
         <ul>
 
             <li>Search professional drivers</li>
+
             <li>Filter by vehicle category</li>
+
             <li>Review experience</li>
+
             <li>Identify suitable candidates</li>
+
             <li>Connect with drivers</li>
 
         </ul>
@@ -954,7 +1067,9 @@ footer a{
 </section>
 
 
-<!-- HOW IT WORKS -->
+<!-- =========================
+     HOW IT WORKS
+========================= -->
 
 <section id="how">
 
@@ -962,9 +1077,7 @@ footer a{
 
 <div class="section-heading">
 
-    <h2>
-        How SDN Works
-    </h2>
+    <h2>How SDN Works</h2>
 
     <p>
         A simple digital process designed to make
@@ -978,13 +1091,9 @@ footer a{
 
     <div class="step">
 
-        <div class="step-number">
-            01
-        </div>
+        <div class="step-number">01</div>
 
-        <h3>
-            Register
-        </h3>
+        <h3>Register</h3>
 
         <p>
             Drivers and employers create their
@@ -996,13 +1105,9 @@ footer a{
 
     <div class="step">
 
-        <div class="step-number">
-            02
-        </div>
+        <div class="step-number">02</div>
 
-        <h3>
-            Verify
-        </h3>
+        <h3>Verify</h3>
 
         <p>
             Driver information and qualifications
@@ -1014,13 +1119,9 @@ footer a{
 
     <div class="step">
 
-        <div class="step-number">
-            03
-        </div>
+        <div class="step-number">03</div>
 
-        <h3>
-            Match
-        </h3>
+        <h3>Match</h3>
 
         <p>
             Employers identify drivers according
@@ -1032,17 +1133,13 @@ footer a{
 
     <div class="step">
 
-        <div class="step-number">
-            04
-        </div>
+        <div class="step-number">04</div>
 
-        <h3>
-            Connect
-        </h3>
+        <h3>Connect</h3>
 
         <p>
-            Employers and suitable drivers
-            connect for employment opportunities.
+            Employers and suitable drivers connect
+            for employment opportunities.
         </p>
 
     </div>
@@ -1054,7 +1151,9 @@ footer a{
 </section>
 
 
-<!-- CATEGORIES -->
+<!-- =========================
+     CATEGORIES
+========================= -->
 
 <section class="categories">
 
@@ -1062,9 +1161,7 @@ footer a{
 
 <div class="section-heading">
 
-    <h2>
-        Drivers for Different Industries
-    </h2>
+    <h2>Drivers for Different Industries</h2>
 
     <p>
         SDN is designed to support professional
@@ -1078,9 +1175,9 @@ footer a{
 
     <div class="category">
 
-        <h3>
-            Truck Drivers
-        </h3>
+        <div class="category-icon">🚛</div>
+
+        <h3>Truck Drivers</h3>
 
         <p>
             Professional drivers for cargo,
@@ -1092,9 +1189,9 @@ footer a{
 
     <div class="category">
 
-        <h3>
-            Bus Drivers
-        </h3>
+        <div class="category-icon">🚌</div>
+
+        <h3>Bus Drivers</h3>
 
         <p>
             Drivers for passenger transport,
@@ -1106,9 +1203,9 @@ footer a{
 
     <div class="category">
 
-        <h3>
-            Tanker / Fuel Drivers
-        </h3>
+        <div class="category-icon">⛽</div>
+
+        <h3>Tanker / Fuel Drivers</h3>
 
         <p>
             Drivers experienced in tanker and
@@ -1120,13 +1217,13 @@ footer a{
 
     <div class="category">
 
-        <h3>
-            Mining Drivers
-        </h3>
+        <div class="category-icon">🏗️</div>
+
+        <h3>Mining Drivers</h3>
 
         <p>
             Professional drivers supporting
-            mining and heavy equipment operations.
+            mining and heavy operations.
         </p>
 
     </div>
@@ -1134,9 +1231,9 @@ footer a{
 
     <div class="category">
 
-        <h3>
-            Construction Drivers
-        </h3>
+        <div class="category-icon">🚧</div>
+
+        <h3>Construction Drivers</h3>
 
         <p>
             Drivers for construction, machinery
@@ -1148,9 +1245,9 @@ footer a{
 
     <div class="category">
 
-        <h3>
-            Personal & Corporate Drivers
-        </h3>
+        <div class="category-icon">🚘</div>
+
+        <h3>Personal & Corporate Drivers</h3>
 
         <p>
             Professional drivers for individuals,
@@ -1166,7 +1263,9 @@ footer a{
 </section>
 
 
-<!-- VERIFICATION -->
+<!-- =========================
+     VERIFICATION
+========================= -->
 
 <section class="verification">
 
@@ -1176,9 +1275,7 @@ footer a{
 
     <div>
 
-        <h2>
-            Built Around Trust & Verification
-        </h2>
+        <h2>Built Around Trust & Verification</h2>
 
         <p>
             SDN is designed to help employers identify
@@ -1188,25 +1285,15 @@ footer a{
 
         <ul class="verification-list">
 
-            <li>
-                Driver licence information
-            </li>
+            <li>Driver licence information</li>
 
-            <li>
-                Professional experience
-            </li>
+            <li>Professional experience</li>
 
-            <li>
-                Vehicle categories
-            </li>
+            <li>Vehicle categories</li>
 
-            <li>
-                Relevant qualifications
-            </li>
+            <li>Relevant qualifications</li>
 
-            <li>
-                Employer feedback and records
-            </li>
+            <li>Employer feedback and records</li>
 
         </ul>
 
@@ -1215,9 +1302,7 @@ footer a{
 
     <div class="verification-box">
 
-        <h3>
-            SDN Verification
-        </h3>
+        <h3>SDN Verification</h3>
 
         <p>
             Our long-term goal is to develop a trusted
@@ -1238,7 +1323,9 @@ footer a{
 </section>
 
 
-<!-- COUNTRIES -->
+<!-- =========================
+     COUNTRIES
+========================= -->
 
 <section class="countries">
 
@@ -1246,9 +1333,7 @@ footer a{
 
 <div class="section-heading">
 
-    <h2>
-        Starting in Tanzania. Built for Africa.
-    </h2>
+    <h2>Starting in Tanzania. Built for Africa.</h2>
 
     <p>
         SDN will begin in Tanzania before expanding
@@ -1260,29 +1345,17 @@ footer a{
 
 <div class="country-list">
 
-    <div class="country active">
-        Tanzania
-    </div>
+    <div class="country active">Tanzania</div>
 
-    <div class="country">
-        Malawi
-    </div>
+    <div class="country">Malawi</div>
 
-    <div class="country">
-        Mozambique
-    </div>
+    <div class="country">Mozambique</div>
 
-    <div class="country">
-        Zimbabwe
-    </div>
+    <div class="country">Zimbabwe</div>
 
-    <div class="country">
-        Algeria
-    </div>
+    <div class="country">Algeria</div>
 
-    <div class="country">
-        Zambia
-    </div>
+    <div class="country">Zambia</div>
 
 </div>
 
@@ -1291,15 +1364,15 @@ footer a{
 </section>
 
 
-<!-- CTA -->
+<!-- =========================
+     CTA
+========================= -->
 
 <section class="cta">
 
 <div class="container">
 
-    <h2>
-        Ready to Connect?
-    </h2>
+    <h2>Ready to Connect?</h2>
 
     <p>
         Join Smart Driver Network and become part of
@@ -1307,10 +1380,7 @@ footer a{
         drivers and employers.
     </p>
 
-    <div
-        class="hero-buttons"
-        style="justify-content:center;"
-    >
+    <div class="hero-buttons" style="justify-content:center;">
 
         <a href="#contact" class="btn btn-light">
             Register as Driver
@@ -1327,7 +1397,9 @@ footer a{
 </section>
 
 
-<!-- CONTACT -->
+<!-- =========================
+     CONTACT
+========================= -->
 
 <section class="contact" id="contact">
 
@@ -1335,9 +1407,7 @@ footer a{
 
 <div class="section-heading">
 
-    <h2>
-        Contact Smart Driver Network
-    </h2>
+    <h2>Contact Smart Driver Network</h2>
 
     <p>
         Interested in joining SDN, partnering with us
@@ -1349,60 +1419,108 @@ footer a{
 
 <div class="contact-grid">
 
+
+    <!-- CONTACT INFORMATION -->
+
     <div class="contact-info">
 
-        <h3>
-            Smart Driver Network (SDN)
-        </h3>
+        <h3>Smart Driver Network (SDN)</h3>
 
         <p>
             Connecting Professional Drivers
             with Trusted Employers.
         </p>
 
-        <p>
-            <strong>Based in:</strong><br>
-            Tanzania
-        </p>
 
-        <p>
-            SDN is designed to serve professional
-            drivers, transport companies, logistics
-            companies, mining operations, construction
-            companies and other employers.
-        </p>
+        <div class="contact-detail">
+
+            <strong>Phone</strong>
+
+            <a href="tel:+255766669666">
+                0766669666
+            </a>
+
+            <br>
+
+            <a href="tel:+255715056883">
+                0715056883
+            </a>
+
+        </div>
+
+
+        <div class="contact-detail">
+
+            <strong>Email</strong>
+
+            <a href="mailto:sdn.ltd23@gmail.com">
+                sdn.ltd23@gmail.com
+            </a>
+
+        </div>
+
+
+        <div class="contact-detail">
+
+            <strong>Location</strong>
+
+            Tanzania
+
+        </div>
+
+
+        <div class="contact-actions">
+
+            <a
+                href="https://wa.me/255766669666"
+                target="_blank"
+                class="btn btn-primary"
+            >
+                WhatsApp
+            </a>
+
+            <a
+                href="mailto:sdn.ltd23@gmail.com"
+                class="btn"
+                style="background:#172033;color:#fff;"
+            >
+                Send Email
+            </a>
+
+        </div>
 
     </div>
 
 
+    <!-- CONTACT FORM -->
+
     <div class="contact-form">
 
-        <form
-            action="#"
-            method="post"
-        >
+        <h3>Send Us a Message</h3>
+
+        <form id="contactForm">
 
             <input
                 type="text"
-                name="name"
+                id="name"
                 placeholder="Full Name"
                 required
             >
 
             <input
                 type="email"
-                name="email"
+                id="email"
                 placeholder="Email Address"
                 required
             >
 
             <input
                 type="tel"
-                name="phone"
+                id="phone"
                 placeholder="Phone Number"
             >
 
-            <select name="type">
+            <select id="type" required>
 
                 <option value="">
                     I am...
@@ -1427,7 +1545,7 @@ footer a{
             </select>
 
             <textarea
-                name="message"
+                id="message"
                 placeholder="Your Message"
                 required
             ></textarea>
@@ -1435,6 +1553,11 @@ footer a{
             <button type="submit">
                 Send Message
             </button>
+
+            <div class="contact-note">
+                Clicking "Send Message" will open your email
+                application with the message prepared for SDN.
+            </div>
 
         </form>
 
@@ -1447,7 +1570,9 @@ footer a{
 </section>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
@@ -1455,9 +1580,7 @@ footer a{
 
     <div>
 
-        <h3>
-            Smart Driver Network
-        </h3>
+        <h3>Smart Driver Network</h3>
 
         <p>
             Connecting Professional Drivers
@@ -1473,9 +1596,7 @@ footer a{
 
     <div>
 
-        <h3>
-            Platform
-        </h3>
+        <h3>Platform</h3>
 
         <ul>
 
@@ -1508,31 +1629,21 @@ footer a{
     </div>
 
 
-    <div>
+    <div class="footer-contact">
 
-        <h3>
-            Network
-        </h3>
+        <h3>Contact</h3>
 
-        <ul>
+        <a href="tel:+255766669666">
+            0766669666
+        </a>
 
-            <li>
-                Tanzania
-            </li>
+        <a href="tel:+255715056883">
+            0715056883
+        </a>
 
-            <li>
-                Malawi
-            </li>
-
-            <li>
-                Mozambique
-            </li>
-
-            <li>
-                Zambia
-            </li>
-
-        </ul>
+        <a href="mailto:sdn.ltd23@gmail.com">
+            sdn.ltd23@gmail.com
+        </a>
 
     </div>
 
@@ -1547,6 +1658,121 @@ footer a{
 </div>
 
 </footer>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+/* DRIVER SEARCH */
+
+function searchDrivers(){
+
+    const category =
+        document.getElementById("driverSearch").value;
+
+    const vehicle =
+        document.getElementById("vehicleSearch").value;
+
+    const location =
+        document.getElementById("locationSearch").value;
+
+    let message = "Driver Search";
+
+    if(category){
+        message +=
+        "\nCategory: " + category;
+    }
+
+    if(vehicle){
+        message +=
+        "\nVehicle: " + vehicle;
+    }
+
+    if(location){
+        message +=
+        "\nLocation: " + location;
+    }
+
+    alert(
+        "SDN Driver Search\n\n" +
+        (category || vehicle || location
+        ? message
+        : "Please select your search requirements.")
+    );
+}
+
+
+/* CONTACT FORM */
+
+document
+.getElementById("contactForm")
+.addEventListener("submit", function(event){
+
+    event.preventDefault();
+
+    const name =
+        document.getElementById("name").value.trim();
+
+    const email =
+        document.getElementById("email").value.trim();
+
+    const phone =
+        document.getElementById("phone").value.trim();
+
+    const type =
+        document.getElementById("type").value;
+
+    const message =
+        document.getElementById("message").value.trim();
+
+
+    const subject =
+        encodeURIComponent(
+            "SDN Website Enquiry - " + type
+        );
+
+
+    const body =
+        encodeURIComponent(
+            "Hello Smart Driver Network,\n\n" +
+
+            "Name: " + name + "\n" +
+
+            "Email: " + email + "\n" +
+
+            "Phone: " + phone + "\n" +
+
+            "I am: " + type + "\n\n" +
+
+            "Message:\n" +
+            message +
+            "\n\n" +
+
+            "Sent from Smart Driver Network website."
+        );
+
+
+    window.location.href =
+        "mailto:sdn.ltd23@gmail.com" +
+        "?subject=" +
+        subject +
+        "&body=" +
+        body;
+
+});
+
+
+/* CURRENT YEAR */
+
+document.querySelector(".copyright").innerHTML =
+    "© " +
+    new Date().getFullYear() +
+    " Smart Driver Network (SDN). All Rights Reserved.";
+
+</script>
 
 </body>
 </html>
