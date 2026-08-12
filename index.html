@@ -1,0 +1,1552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Smart Driver Network (SDN) | Connecting Professional Drivers with Trusted Employers</title>
+
+<meta name="description" content="Smart Driver Network connects professional drivers with trusted employers across Tanzania and Africa.">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    color:#172033;
+    background:#fff;
+    line-height:1.6;
+}
+
+/* HEADER */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#fff;
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
+}
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    padding:14px 25px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-mark{
+    width:52px;
+    height:52px;
+    border-radius:12px;
+    background:#0b5cab;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
+    font-weight:800;
+}
+
+.logo-text h1{
+    font-size:20px;
+    color:#0b5cab;
+    line-height:1.1;
+}
+
+.logo-text span{
+    font-size:11px;
+    color:#64748b;
+    font-weight:600;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#172033;
+    font-size:14px;
+    font-weight:600;
+}
+
+nav a:hover{
+    color:#0b5cab;
+}
+
+.nav-button{
+    background:#0b5cab;
+    color:#fff!important;
+    padding:11px 19px;
+    border-radius:7px;
+}
+
+/* HERO */
+
+.hero{
+    min-height:680px;
+    background:
+    linear-gradient(
+        rgba(5,25,50,.82),
+        rgba(5,25,50,.82)
+    ),
+    url("hero-driver.jpg") center/cover no-repeat;
+
+    display:flex;
+    align-items:center;
+}
+
+.hero-container{
+    max-width:1200px;
+    width:100%;
+    margin:auto;
+    padding:90px 25px;
+}
+
+.hero-content{
+    max-width:760px;
+    color:#fff;
+}
+
+.hero-badge{
+    display:inline-block;
+    padding:8px 15px;
+    border:1px solid rgba(255,255,255,.35);
+    border-radius:30px;
+    margin-bottom:20px;
+    font-size:13px;
+}
+
+.hero h2{
+    font-size:58px;
+    line-height:1.08;
+    margin-bottom:20px;
+}
+
+.hero h2 span{
+    color:#39a7ff;
+}
+
+.hero p{
+    font-size:19px;
+    max-width:680px;
+    color:#e5edf5;
+    margin-bottom:30px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 25px;
+    border-radius:7px;
+    text-decoration:none;
+    font-weight:700;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:#0b75d1;
+    color:#fff;
+}
+
+.btn-primary:hover{
+    background:#07599f;
+}
+
+.btn-outline{
+    border:1px solid #fff;
+    color:#fff;
+}
+
+.btn-outline:hover{
+    background:#fff;
+    color:#172033;
+}
+
+/* SEARCH */
+
+.search-box{
+    max-width:1050px;
+    margin:-55px auto 0;
+    position:relative;
+    z-index:10;
+    background:#fff;
+    border-radius:12px;
+    padding:25px;
+    box-shadow:0 10px 35px rgba(0,0,0,.12);
+}
+
+.search-title{
+    margin-bottom:18px;
+}
+
+.search-title h3{
+    color:#172033;
+    font-size:22px;
+}
+
+.search-title p{
+    color:#64748b;
+    font-size:14px;
+}
+
+.search-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr auto;
+    gap:12px;
+}
+
+.search-grid input,
+.search-grid select{
+    width:100%;
+    padding:13px;
+    border:1px solid #dce2e8;
+    border-radius:6px;
+    outline:none;
+    background:#fff;
+}
+
+.search-grid button{
+    border:none;
+    background:#0b5cab;
+    color:#fff;
+    padding:13px 22px;
+    border-radius:6px;
+    font-weight:700;
+    cursor:pointer;
+}
+
+/* GENERAL */
+
+section{
+    padding:90px 25px;
+}
+
+.container{
+    max-width:1150px;
+    margin:auto;
+}
+
+.section-heading{
+    text-align:center;
+    max-width:750px;
+    margin:0 auto 50px;
+}
+
+.section-heading h2{
+    font-size:38px;
+    color:#172033;
+    margin-bottom:12px;
+}
+
+.section-heading p{
+    color:#64748b;
+}
+
+/* TWO SIDES */
+
+.two-sides{
+    background:#f7f9fc;
+}
+
+.side-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.side-card{
+    background:#fff;
+    padding:40px;
+    border-radius:12px;
+    border:1px solid #e5eaf0;
+    box-shadow:0 5px 20px rgba(0,0,0,.05);
+}
+
+.side-card.driver{
+    border-top:5px solid #0b75d1;
+}
+
+.side-card.employer{
+    border-top:5px solid #172033;
+}
+
+.side-card h3{
+    font-size:27px;
+    margin-bottom:12px;
+}
+
+.side-card p{
+    color:#64748b;
+    margin-bottom:22px;
+}
+
+.side-card ul{
+    list-style:none;
+    margin-bottom:25px;
+}
+
+.side-card li{
+    margin-bottom:10px;
+    color:#344054;
+}
+
+.side-card li::before{
+    content:"✓";
+    color:#0b75d1;
+    font-weight:bold;
+    margin-right:9px;
+}
+
+/* HOW IT WORKS */
+
+.steps{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.step{
+    text-align:center;
+    padding:25px 18px;
+}
+
+.step-number{
+    width:55px;
+    height:55px;
+    margin:0 auto 18px;
+    border-radius:50%;
+    background:#0b5cab;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:800;
+    font-size:19px;
+}
+
+.step h3{
+    margin-bottom:8px;
+}
+
+.step p{
+    color:#64748b;
+    font-size:14px;
+}
+
+/* CATEGORIES */
+
+.categories{
+    background:#f7f9fc;
+}
+
+.category-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.category{
+    background:#fff;
+    padding:28px;
+    border-radius:10px;
+    border:1px solid #e5eaf0;
+}
+
+.category h3{
+    color:#172033;
+    margin-bottom:8px;
+}
+
+.category p{
+    color:#64748b;
+    font-size:14px;
+}
+
+/* VERIFICATION */
+
+.verification{
+    background:#172033;
+    color:#fff;
+}
+
+.verification-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:55px;
+    align-items:center;
+}
+
+.verification h2{
+    font-size:38px;
+    margin-bottom:18px;
+}
+
+.verification p{
+    color:#d6deea;
+    margin-bottom:20px;
+}
+
+.verification-list{
+    list-style:none;
+}
+
+.verification-list li{
+    padding:13px 0;
+    border-bottom:1px solid rgba(255,255,255,.12);
+}
+
+.verification-list li::before{
+    content:"✓";
+    color:#39a7ff;
+    margin-right:10px;
+    font-weight:bold;
+}
+
+.verification-box{
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.15);
+    padding:35px;
+    border-radius:12px;
+}
+
+.verification-box h3{
+    color:#39a7ff;
+    margin-bottom:15px;
+}
+
+/* COUNTRIES */
+
+.countries{
+    text-align:center;
+}
+
+.country-list{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.country{
+    padding:12px 22px;
+    border:1px solid #dce2e8;
+    border-radius:30px;
+    font-weight:600;
+    color:#344054;
+}
+
+.country.active{
+    background:#0b5cab;
+    color:#fff;
+    border-color:#0b5cab;
+}
+
+/* CTA */
+
+.cta{
+    background:
+    linear-gradient(
+        rgba(11,92,171,.92),
+        rgba(11,92,171,.92)
+    ),
+    url("truck-road.jpg") center/cover no-repeat;
+
+    text-align:center;
+    color:#fff;
+}
+
+.cta h2{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.cta p{
+    max-width:700px;
+    margin:0 auto 25px;
+    color:#e9f2fb;
+}
+
+/* CONTACT */
+
+.contact{
+    background:#f7f9fc;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.contact-info h3{
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.contact-info p{
+    color:#64748b;
+    margin-bottom:12px;
+}
+
+.contact-form{
+    background:#fff;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 5px 20px rgba(0,0,0,.06);
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select{
+    width:100%;
+    padding:13px;
+    border:1px solid #dce2e8;
+    border-radius:6px;
+    margin-bottom:15px;
+    font-family:inherit;
+}
+
+.contact-form textarea{
+    min-height:130px;
+    resize:vertical;
+}
+
+.contact-form button{
+    border:none;
+    background:#0b5cab;
+    color:#fff;
+    padding:13px 25px;
+    border-radius:6px;
+    font-weight:700;
+    cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+    background:#0d1726;
+    color:#fff;
+    padding:50px 25px 20px;
+}
+
+.footer-grid{
+    max-width:1150px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:40px;
+}
+
+footer h3{
+    margin-bottom:15px;
+}
+
+footer p,
+footer li,
+footer a{
+    color:#aeb9c8;
+    font-size:14px;
+}
+
+footer ul{
+    list-style:none;
+}
+
+footer li{
+    margin-bottom:8px;
+}
+
+footer a{
+    text-decoration:none;
+}
+
+.copyright{
+    max-width:1150px;
+    margin:30px auto 0;
+    padding-top:20px;
+    border-top:1px solid rgba(255,255,255,.12);
+    text-align:center;
+    color:#8f9bab;
+    font-size:13px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .search-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .steps{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .category-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .verification-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    nav ul{
+        display:none;
+    }
+}
+
+@media(max-width:600px){
+
+    .navbar{
+        padding:12px 15px;
+    }
+
+    .hero{
+        min-height:620px;
+    }
+
+    .hero-container{
+        padding:70px 20px;
+    }
+
+    .hero h2{
+        font-size:39px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    section{
+        padding:65px 20px;
+    }
+
+    .section-heading h2,
+    .verification h2,
+    .cta h2{
+        font-size:30px;
+    }
+
+    .search-box{
+        margin:-35px 15px 0;
+        padding:20px;
+    }
+
+    .search-grid,
+    .side-grid,
+    .steps,
+    .category-grid,
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .logo-text h1{
+        font-size:17px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+    }
+
+    .btn{
+        text-align:center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="navbar">
+
+    <div class="logo">
+
+        <div class="logo-mark">
+            SDN
+        </div>
+
+        <div class="logo-text">
+
+            <h1>
+                Smart Driver Network
+            </h1>
+
+            <span>
+                CONNECTING DRIVERS & EMPLOYERS
+            </span>
+
+        </div>
+
+    </div>
+
+    <nav>
+
+        <ul>
+
+            <li>
+                <a href="#home">Home</a>
+            </li>
+
+            <li>
+                <a href="#how">How It Works</a>
+            </li>
+
+            <li>
+                <a href="#drivers">For Drivers</a>
+            </li>
+
+            <li>
+                <a href="#employers">For Employers</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+
+            <li>
+                <a href="#register" class="nav-button">
+                    Register
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-container">
+
+<div class="hero-content">
+
+    <div class="hero-badge">
+        Tanzania's Professional Driver Network
+    </div>
+
+    <h2>
+        Connecting
+        <span>Professional Drivers</span>
+        with Trusted Employers
+    </h2>
+
+    <p>
+        Smart Driver Network (SDN) is a digital platform
+        designed to connect qualified professional drivers
+        with employers looking for the right driver for
+        the right vehicle and job.
+    </p>
+
+    <div class="hero-buttons">
+
+        <a href="#drivers" class="btn btn-primary">
+            I'm a Driver
+        </a>
+
+        <a href="#employers" class="btn btn-outline">
+            I'm an Employer
+        </a>
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SEARCH -->
+
+<div class="search-box">
+
+<div class="search-title">
+
+    <h3>
+        Find the Right Driver
+    </h3>
+
+    <p>
+        Search according to vehicle category,
+        experience and location.
+    </p>
+
+</div>
+
+<div class="search-grid">
+
+    <input
+        type="text"
+        placeholder="Driver category"
+    >
+
+    <select>
+
+        <option>
+            Select Vehicle
+        </option>
+
+        <option>
+            Truck
+        </option>
+
+        <option>
+            Bus
+        </option>
+
+        <option>
+            Tanker / Fuel
+        </option>
+
+        <option>
+            Mining Vehicle
+        </option>
+
+        <option>
+            Construction Vehicle
+        </option>
+
+        <option>
+            Personal / Corporate
+        </option>
+
+    </select>
+
+    <input
+        type="text"
+        placeholder="Location"
+    >
+
+    <button>
+        Search
+    </button>
+
+</div>
+
+</div>
+
+
+<!-- TWO SIDES -->
+
+<section class="two-sides" id="register">
+
+<div class="container">
+
+<div class="section-heading">
+
+    <h2>
+        One Network. Two Opportunities.
+    </h2>
+
+    <p>
+        Whether you are a professional driver looking
+        for an opportunity or an employer looking for
+        a qualified driver, SDN connects you.
+    </p>
+
+</div>
+
+
+<div class="side-grid">
+
+    <div class="side-card driver" id="drivers">
+
+        <h3>
+            For Professional Drivers
+        </h3>
+
+        <p>
+            Build your professional profile and become
+            visible to employers looking for drivers
+            with your qualifications and experience.
+        </p>
+
+        <ul>
+
+            <li>Create your driver profile</li>
+            <li>Add licences and qualifications</li>
+            <li>Add driving experience</li>
+            <li>Select vehicle categories</li>
+            <li>Discover employment opportunities</li>
+
+        </ul>
+
+        <a href="#contact" class="btn btn-primary">
+            Register as Driver
+        </a>
+
+    </div>
+
+
+    <div class="side-card employer" id="employers">
+
+        <h3>
+            For Employers
+        </h3>
+
+        <p>
+            Find professional drivers according to
+            the vehicle, experience and qualifications
+            required for your operation.
+        </p>
+
+        <ul>
+
+            <li>Search professional drivers</li>
+            <li>Filter by vehicle category</li>
+            <li>Review experience</li>
+            <li>Identify suitable candidates</li>
+            <li>Connect with drivers</li>
+
+        </ul>
+
+        <a href="#contact" class="btn btn-primary">
+            Find a Driver
+        </a>
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- HOW IT WORKS -->
+
+<section id="how">
+
+<div class="container">
+
+<div class="section-heading">
+
+    <h2>
+        How SDN Works
+    </h2>
+
+    <p>
+        A simple digital process designed to make
+        driver recruitment faster and easier.
+    </p>
+
+</div>
+
+
+<div class="steps">
+
+    <div class="step">
+
+        <div class="step-number">
+            01
+        </div>
+
+        <h3>
+            Register
+        </h3>
+
+        <p>
+            Drivers and employers create their
+            professional profiles.
+        </p>
+
+    </div>
+
+
+    <div class="step">
+
+        <div class="step-number">
+            02
+        </div>
+
+        <h3>
+            Verify
+        </h3>
+
+        <p>
+            Driver information and qualifications
+            can be reviewed and verified.
+        </p>
+
+    </div>
+
+
+    <div class="step">
+
+        <div class="step-number">
+            03
+        </div>
+
+        <h3>
+            Match
+        </h3>
+
+        <p>
+            Employers identify drivers according
+            to their vehicle and job requirements.
+        </p>
+
+    </div>
+
+
+    <div class="step">
+
+        <div class="step-number">
+            04
+        </div>
+
+        <h3>
+            Connect
+        </h3>
+
+        <p>
+            Employers and suitable drivers
+            connect for employment opportunities.
+        </p>
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CATEGORIES -->
+
+<section class="categories">
+
+<div class="container">
+
+<div class="section-heading">
+
+    <h2>
+        Drivers for Different Industries
+    </h2>
+
+    <p>
+        SDN is designed to support professional
+        drivers across multiple sectors.
+    </p>
+
+</div>
+
+
+<div class="category-grid">
+
+    <div class="category">
+
+        <h3>
+            Truck Drivers
+        </h3>
+
+        <p>
+            Professional drivers for cargo,
+            logistics and long-distance transport.
+        </p>
+
+    </div>
+
+
+    <div class="category">
+
+        <h3>
+            Bus Drivers
+        </h3>
+
+        <p>
+            Drivers for passenger transport,
+            buses and corporate transport.
+        </p>
+
+    </div>
+
+
+    <div class="category">
+
+        <h3>
+            Tanker / Fuel Drivers
+        </h3>
+
+        <p>
+            Drivers experienced in tanker and
+            fuel transportation operations.
+        </p>
+
+    </div>
+
+
+    <div class="category">
+
+        <h3>
+            Mining Drivers
+        </h3>
+
+        <p>
+            Professional drivers supporting
+            mining and heavy equipment operations.
+        </p>
+
+    </div>
+
+
+    <div class="category">
+
+        <h3>
+            Construction Drivers
+        </h3>
+
+        <p>
+            Drivers for construction, machinery
+            and project logistics.
+        </p>
+
+    </div>
+
+
+    <div class="category">
+
+        <h3>
+            Personal & Corporate Drivers
+        </h3>
+
+        <p>
+            Professional drivers for individuals,
+            companies and executive transport.
+        </p>
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- VERIFICATION -->
+
+<section class="verification">
+
+<div class="container">
+
+<div class="verification-grid">
+
+    <div>
+
+        <h2>
+            Built Around Trust & Verification
+        </h2>
+
+        <p>
+            SDN is designed to help employers identify
+            professional drivers based on qualifications,
+            experience and vehicle requirements.
+        </p>
+
+        <ul class="verification-list">
+
+            <li>
+                Driver licence information
+            </li>
+
+            <li>
+                Professional experience
+            </li>
+
+            <li>
+                Vehicle categories
+            </li>
+
+            <li>
+                Relevant qualifications
+            </li>
+
+            <li>
+                Employer feedback and records
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <div class="verification-box">
+
+        <h3>
+            SDN Verification
+        </h3>
+
+        <p>
+            Our long-term goal is to develop a trusted
+            verification system that helps employers
+            make better recruitment decisions.
+        </p>
+
+        <a href="#contact" class="btn btn-primary">
+            Learn More
+        </a>
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- COUNTRIES -->
+
+<section class="countries">
+
+<div class="container">
+
+<div class="section-heading">
+
+    <h2>
+        Starting in Tanzania. Built for Africa.
+    </h2>
+
+    <p>
+        SDN will begin in Tanzania before expanding
+        into selected African markets.
+    </p>
+
+</div>
+
+
+<div class="country-list">
+
+    <div class="country active">
+        Tanzania
+    </div>
+
+    <div class="country">
+        Malawi
+    </div>
+
+    <div class="country">
+        Mozambique
+    </div>
+
+    <div class="country">
+        Zimbabwe
+    </div>
+
+    <div class="country">
+        Algeria
+    </div>
+
+    <div class="country">
+        Zambia
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<div class="container">
+
+    <h2>
+        Ready to Connect?
+    </h2>
+
+    <p>
+        Join Smart Driver Network and become part of
+        a professional digital network connecting
+        drivers and employers.
+    </p>
+
+    <div
+        class="hero-buttons"
+        style="justify-content:center;"
+    >
+
+        <a href="#contact" class="btn btn-light">
+            Register as Driver
+        </a>
+
+        <a href="#contact" class="btn btn-outline">
+            Register as Employer
+        </a>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+<div class="section-heading">
+
+    <h2>
+        Contact Smart Driver Network
+    </h2>
+
+    <p>
+        Interested in joining SDN, partnering with us
+        or learning more about the platform?
+    </p>
+
+</div>
+
+
+<div class="contact-grid">
+
+    <div class="contact-info">
+
+        <h3>
+            Smart Driver Network (SDN)
+        </h3>
+
+        <p>
+            Connecting Professional Drivers
+            with Trusted Employers.
+        </p>
+
+        <p>
+            <strong>Based in:</strong><br>
+            Tanzania
+        </p>
+
+        <p>
+            SDN is designed to serve professional
+            drivers, transport companies, logistics
+            companies, mining operations, construction
+            companies and other employers.
+        </p>
+
+    </div>
+
+
+    <div class="contact-form">
+
+        <form
+            action="#"
+            method="post"
+        >
+
+            <input
+                type="text"
+                name="name"
+                placeholder="Full Name"
+                required
+            >
+
+            <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                required
+            >
+
+            <input
+                type="tel"
+                name="phone"
+                placeholder="Phone Number"
+            >
+
+            <select name="type">
+
+                <option value="">
+                    I am...
+                </option>
+
+                <option>
+                    A Professional Driver
+                </option>
+
+                <option>
+                    An Employer
+                </option>
+
+                <option>
+                    A Business Partner
+                </option>
+
+                <option>
+                    An Investor
+                </option>
+
+            </select>
+
+            <textarea
+                name="message"
+                placeholder="Your Message"
+                required
+            ></textarea>
+
+            <button type="submit">
+                Send Message
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-grid">
+
+    <div>
+
+        <h3>
+            Smart Driver Network
+        </h3>
+
+        <p>
+            Connecting Professional Drivers
+            with Trusted Employers.
+        </p>
+
+        <p style="margin-top:12px;">
+            Driving Careers. Connecting Opportunities.
+        </p>
+
+    </div>
+
+
+    <div>
+
+        <h3>
+            Platform
+        </h3>
+
+        <ul>
+
+            <li>
+                <a href="#drivers">
+                    For Drivers
+                </a>
+            </li>
+
+            <li>
+                <a href="#employers">
+                    For Employers
+                </a>
+            </li>
+
+            <li>
+                <a href="#how">
+                    How It Works
+                </a>
+            </li>
+
+            <li>
+                <a href="#contact">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <div>
+
+        <h3>
+            Network
+        </h3>
+
+        <ul>
+
+            <li>
+                Tanzania
+            </li>
+
+            <li>
+                Malawi
+            </li>
+
+            <li>
+                Mozambique
+            </li>
+
+            <li>
+                Zambia
+            </li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+
+<div class="copyright">
+
+    © 2026 Smart Driver Network (SDN).
+    All Rights Reserved.
+
+</div>
+
+</footer>
+
+</body>
+</html>
